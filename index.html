@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>الوَتِين | Alwatin — Moroccan Traditional Wear</title>
+    <meta name="theme-color" content="#555e43" />
+    <meta name="description" content="A multilingual Moroccan traditional clothing store with men’s caftans, djellabas, jabador, gandoura, kandrissi trousers, blog guides, and Cash on Delivery checkout." />
+    <link rel="canonical" href="https://www.watin.shop/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="الوَتِين | لباس مغربي تقليدي رجالي" />
+    <meta property="og:description" content="جلابة، جبادور، قندورة، قفطان وسروال قندريسي رجالي مع التوصيل داخل المغرب والدفع عند الاستلام." />
+    <meta property="og:url" content="https://www.watin.shop/" />
+    <meta property="og:image" content="https://www.watin.shop/assets/jabador-olive.png" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"ClothingStore","name":"الوَتِين Alwatin","description":"متجر مغربي للملابس التقليدية الرجالية.","url":"https://www.watin.shop/","areaServed":"MA","currenciesAccepted":"MAD","paymentAccepted":"Cash on Delivery","sameAs":[]}</script>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="Alwatin">
+        <span>
+          <svg class="brand-logo" viewBox="76 1152 202 87" width="202" height="87" role="img" aria-label="الوَتِين"><image href="./assets/alwatin-reference.jpeg" width="1227" height="1282" /></svg>
+          <small data-i18n="brandSub">لباس مغربي تقليدي</small>
+        </span>
+      </a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#shop" data-i18n="navShop">المتجر</a>
+        <a href="#blog" data-i18n="navBlog">المدونة</a>
+        <a href="#cod" data-i18n="navCod">الدفع عند الاستلام</a>
+      </nav>
+      <div class="header-actions">
+        <select id="languageSelect" aria-label="Choose language">
+          <option value="ar">العربية</option>
+          <option value="fr">Français</option>
+          <option value="en">English</option>
+        </select>
+        <button class="cart-toggle" type="button" data-i18n-label="cartTitle" aria-label="سلة الطلب" aria-controls="cartPanel" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 3h2l2.5 12h11L21 7H6"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></svg>
+          <span class="cart-label" data-i18n="cart">السلة</span>
+          <b id="cartCount">0</b>
+        </button>
+      </div>
+    </header>
+
+    <main id="home">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow" data-i18n="eyebrow">لباس مغربي أصيل</p>
+          <h1 data-i18n="heroTitle">أناقة مغربية، حتى لباب دارك.</h1>
+          <p data-i18n="heroText">اكتشف الجلابة، الجبادور، القندورة والقفطان. اختيارات تقليدية وعصرية للعيد، الأعراس وكل مناسباتك.</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#shop" data-i18n="shopNow">اكتشف المجموعة</a>
+            <a class="btn ghost" href="#blog" data-i18n="readGuides">اقرأ الدلائل</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <img src="./assets/jabador-olive.png" alt="جبادور مغربي أخضر بتطريز ذهبي" width="1024" height="1536" fetchpriority="high" />
+          <div class="hero-caption"><span data-i18n="heritageLine">أصالة مغربية</span><em data-i18n="heritageTitle">أناقة تتوارثها الأجيال.</em></div>
+        </div>
+      </section>
+
+      <section class="trust-strip" id="cod">
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 5h12v13H2zM14 10h4l4 4v4h-8"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></svg><div><strong data-i18n="codTitle">الدفع عند الاستلام</strong><span data-i18n="codText">اطلب الآن، وخلّص عند التوصيل.</span></div></div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><div><strong data-i18n="deliveryTitle">توصيل داخل المغرب</strong><span data-i18n="deliveryText">التوصيل داخل المغرب.</span></div></div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M10 5a2 2 0 1 1 2 2v3L2 18v2h20v-2L12 10"/></svg><div><strong data-i18n="sizesTitle">مقاسات واضحة</strong><span data-i18n="sizesText">اختار المقاس المناسب ليك.</span></div></div>
+      </section>
+
+      <section class="section" id="shop">
+        <div class="section-heading category-heading"><h2 data-i18n="shopEyebrow">تصنيفات المتجر</h2><a class="text-link" href="#productGrid" data-category="all"><span data-i18n="viewAll">عرض الكل</span><span class="direction-arrow" aria-hidden="true">→</span></a></div>
+        <div class="filters" id="categoryFilters" aria-label="Product categories"></div>
+        <div class="section-heading products-heading"><div><h2 data-i18n="shopTitle">مختارات المتجر</h2><p data-i18n="shopText">لباس مغربي لكل مناسبة.</p></div><button type="button" class="text-link" data-category="all"><span data-i18n="viewAll">عرض الكل</span><span class="direction-arrow" aria-hidden="true">→</span></button></div>
+        <div class="product-grid" id="productGrid"></div>
+        <p class="image-note" data-i18n="demoImages">صور توضيحية للمجموعة</p>
+      </section>
+
+      <section class="section split-section">
+        <div>
+          <p class="eyebrow" data-i18n="seoEyebrow">دليلك للأناقة المغربية</p>
+          <h2 data-i18n="seoTitle">من أول إلهام، للاختيار المناسب.</h2>
+          <p data-i18n="seoText">تعرّف على الأثواب والموديلات، اكتشف المجموعة اللي كتناسبك، وكمل طلبك بالدفع عند الاستلام.</p>
+        </div>
+        <div class="seo-map">
+          <span data-i18n="mapOne">استلهم من دلائل اللباس المغربي</span>
+          <span data-i18n="mapTwo">اكتشف المجموعة المناسبة ليك</span>
+          <span data-i18n="mapThree">اختار طلبك وخلّص عند الاستلام</span>
+        </div>
+      </section>
+
+      <section class="section" id="blog">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="blogEyebrow">المدونة</p>
+          <h2 data-i18n="blogTitle">دلائل ونصائح من المدونة</h2>
+          <p data-i18n="blogText">كل ما تحتاجه لاختيار وتنسيق لباسك المغربي.</p>
+        </div>
+        <div class="blog-grid" id="blogGrid"></div>
+      </section>
+    </main>
+
+    <main id="productPage" class="product-page" hidden tabindex="-1" aria-label="Product"></main>
+
+    <footer class="site-footer"><a class="brand" href="#home"><span><svg class="brand-logo" viewBox="76 1152 202 87" width="202" height="87" role="img" aria-label="الوَتِين"><image href="./assets/alwatin-reference.jpeg" width="1227" height="1282" /></svg><small data-i18n="brandSub">لباس مغربي تقليدي</small></span></a><p data-i18n="heritageTitle">أناقة تتوارثها الأجيال.</p><a class="text-link" href="#home"><span data-i18n="backTop">العودة للأعلى</span><span aria-hidden="true">↑</span></a></footer>
+
+    <aside class="cart-panel" id="cartPanel" role="dialog" aria-modal="true" aria-labelledby="cartHeading" aria-hidden="true" inert>
+      <div class="cart-header">
+        <h2 id="cartHeading" data-i18n="cartTitle">سلة الطلب</h2>
+        <button type="button" class="icon-button" id="closeCart" data-i18n-label="close" aria-label="إغلاق">×</button>
+      </div>
+      <div id="cartItems" class="cart-items"></div>
+      <div class="cart-total">
+        <span data-i18n="total">المجموع</span>
+        <strong id="cartTotal">0 MAD</strong>
+      </div>
+      <form class="checkout-form" id="checkoutForm">
+        <label>
+          <span data-i18n="nameLabel">الاسم الكامل</span>
+          <input required name="name" autocomplete="name" />
+        </label>
+        <label>
+          <span data-i18n="phoneLabel">رقم الهاتف</span>
+          <input required type="tel" name="phone" autocomplete="tel" />
+        </label>
+        <label>
+          <span data-i18n="cityLabel">المدينة والعنوان</span>
+          <textarea required name="address" rows="3"></textarea>
+        </label>
+        <p class="cod-note" data-i18n="checkoutNote">الدفع عند الاستلام. غادي نتاصلوا بك لتأكيد الطلب والتوصيل.</p>
+        <button class="btn primary full" type="submit" data-i18n="placeOrder">تجربة الطلب</button>
+      </form>
+      <p class="success-message" id="successMessage" role="status" data-i18n="successMessage">تسجل الطلب بنجاح. غادي نتاصلوا بك للتأكيد.</p>
+    </aside>
+    <div class="overlay" id="overlay"></div>
+
+    <script src="./supabase-config.js"></script>
+    <script src="./supabase.js"></script>
+    <script src="./script.js"></script>
+    <script src="./product.js"></script>
+  </body>
+</html>
