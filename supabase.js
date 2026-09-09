@@ -35,7 +35,7 @@
       body: JSON.stringify({
         email,
         create_user: true,
-        options: { emailRedirectTo: `${location.origin}/admin.html` }
+        redirect_to: `${location.origin}/admin.html`
       })
     });
   }
