@@ -32,7 +32,7 @@ h2 { font-size: clamp(1.5rem, 2.6vw, 2rem); line-height: 1.25; letter-spacing: -
 h3 { font-size: 1.125rem; line-height: 1.5; }
 [dir="rtl"] h1 { line-height: 1.4; letter-spacing: 0; font-size: clamp(2.2rem, 3.8vw, 3.5rem); }
 [dir="rtl"] h2, [dir="rtl"] h3 { letter-spacing: 0; line-height: 1.6; }
-.site-header { max-width: 1440px; margin: auto; position: sticky; top: 0; z-index: 20; display: flex; align-items: center; justify-content: space-between; gap: 30px; padding: 18px var(--gutter); background: rgba(250, 248, 243, .97); border-bottom: 1px solid var(--line); backdrop-filter: blur(16px); }
+.site-header { max-width: 1440px; margin: auto; position: sticky; top: 0; z-index: 20; display: flex; align-items: center; justify-content: space-between; gap: 30px; min-height: 72px; padding: 8px var(--gutter); background: rgba(250, 248, 243, .86); border-bottom: 1px solid rgba(230, 227, 217, .9); box-shadow: 0 2px 10px rgba(0, 0, 0, .05); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); }
 .brand { flex-shrink: 0; display: inline-flex; align-items: center; }
 .brand strong { display: block; color: var(--emerald); font-family: 'Noto Naskh Arabic', 'Traditional Arabic', 'Times New Roman', serif; font-weight: 700; font-size: 3.4rem; line-height: 1.05; text-align: center; }
 .brand small { display: block; font-size: .8125rem; color: var(--muted); margin-top: 7px; line-height: 1.4; text-align: center; }
@@ -117,8 +117,23 @@ main { max-width: 1440px; margin: auto; padding: 22px var(--gutter) 0; }
 .blog-card h3 { font-size: 1.15rem; }
 .blog-card p { font-size: .9375rem; color: var(--muted); margin: 10px 0 17px; }
 .blog-link { color: var(--emerald); font-size: .875rem; font-weight: 600; }
-.site-footer { max-width: 1320px; margin: 60px auto 0; padding: 36px var(--gutter); display: flex; align-items: center; justify-content: space-between; gap: 30px; border-top: 1px solid var(--line); }
-.site-footer p { font-family: Georgia, 'Times New Roman', serif; font-size: 1.6rem; color: var(--emerald); font-style: italic; }
+.site-footer { max-width: 1440px; margin: 72px auto 0; padding: 54px var(--gutter) 0; border-top: 1px solid var(--line); background: linear-gradient(180deg, rgba(246, 244, 236, .55), transparent); }
+.footer-grid { display: grid; grid-template-columns: minmax(1.4fr, 1.7fr) repeat(3, minmax(0, 1fr)); gap: 34px; padding-bottom: 46px; }
+.footer-brand-block { min-width: 0; }
+.footer-brand-block .brand { display: inline-flex; }
+.footer-tagline { max-width: 230px; margin: 18px 0 18px; color: var(--muted); font-size: .95rem; }
+.footer-column { display: grid; align-content: start; gap: 11px; }
+.footer-column h3 { margin: 0 0 8px; color: var(--emerald-dark); font-size: .98rem; }
+.footer-column a { width: fit-content; color: var(--muted); font-size: .9rem; transition: color .18s, transform .18s; }
+.footer-column a:hover { color: var(--emerald); transform: translateX(-3px); }
+.footer-note p { margin: 0; max-width: 230px; color: var(--muted); font-size: .9rem; line-height: 1.8; }
+.social-links { display: flex; align-items: center; gap: 9px; }
+.social-link { display: grid; place-items: center; width: 36px; height: 36px; border: 1px solid var(--line); border-radius: 50%; color: var(--emerald); background: rgba(255, 254, 250, .8); font-family: Arial, sans-serif; font-size: 1.05rem; font-weight: 700; transition: background .18s, color .18s, transform .18s; }
+.social-link:hover { background: var(--emerald); color: #fff; transform: translateY(-2px); }
+.payment-badge { display: inline-flex; align-items: center; width: fit-content; margin-top: 15px; padding: 5px 10px; border: 1px solid #d8cfb6; border-radius: 5px; background: #f4edda; color: #75643e; font-size: .75rem; font-weight: 700; letter-spacing: .08em; }
+.footer-bottom { display: flex; align-items: center; justify-content: space-between; gap: 18px; min-height: 62px; border-top: 1px solid var(--line); color: var(--muted); font-size: .8rem; }
+.back-top { display: inline-flex; align-items: center; gap: 8px; color: var(--emerald); font-weight: 650; }
+.back-top:hover { text-decoration: underline; text-underline-offset: 4px; }
 .cart-panel { position: fixed; z-index: 50; top: 0; bottom: 0; inset-inline-end: 0; width: min(470px, 100%); padding: 28px; background: var(--surface); overflow-y: auto; overscroll-behavior: contain; box-shadow: var(--shadow); transform: translateX(105%); visibility: hidden; transition: transform .25s ease, visibility .25s; }
 [dir="rtl"] .cart-panel { transform: translateX(-105%); }
 .cart-panel.open, [dir="rtl"] .cart-panel.open { transform: translateX(0); visibility: visible; }
@@ -147,7 +162,7 @@ textarea { resize: vertical; min-height: 90px; }
 body.cart-open { overflow: hidden; }
 @media (min-width: 1300px) { .product-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 @media (max-width: 1000px) {
-  .site-header { gap: 18px; flex-wrap: wrap; padding-block: 14px; }
+  .site-header { gap: 18px; flex-wrap: wrap; min-height: 66px; padding-block: 7px; }
   .nav { order: 3; width: 100%; justify-content: center; border-top: 1px solid var(--line); padding-top: 8px; gap: 24px; }
   .hero { min-height: 440px; grid-template-columns: 1fr 1fr; }
   .hero-copy { padding: 28px; }
@@ -171,7 +186,7 @@ body.cart-open { overflow: hidden; }
   .header-actions { gap: 8px; }
   select { max-width: 100px; font-size: .8125rem; padding-inline: 9px; }
   .cart-label { display: none; }
-  .site-header { gap: 10px; padding-block: 12px 8px; }
+  .site-header { gap: 10px; padding-block: 7px 5px; }
   .nav { font-size: .8125rem; gap: 20px; padding-top: 3px; }
   .nav a { padding-block: 8px; }
   main { padding-top: 14px; }
@@ -221,8 +236,10 @@ body.cart-open { overflow: hidden; }
   .blog-body { padding: 18px; }
   .blog-card h3 { font-size: 1rem; }
   .blog-card p { font-size: .875rem; }
-  .site-footer { margin-top: 32px; flex-wrap: wrap; padding-block: 25px; gap: 18px; }
-  .site-footer p { order: 3; width: 100%; margin: 0; font-size: 1.3rem; text-align: center; }
+  .site-footer { margin-top: 42px; padding-top: 36px; }
+  .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px 22px; padding-bottom: 32px; }
+  .footer-brand-block { grid-column: 1 / -1; }
+  .footer-bottom { align-items: flex-start; flex-direction: column; justify-content: center; gap: 6px; padding-block: 15px; }
   .cart-panel { padding: 22px; }
   html { scroll-padding-top: 145px; }
 }
