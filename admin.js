@@ -71,7 +71,7 @@ function renderOrders() {
 function fillSettings() { const form = document.getElementById('settingsForm'); Object.entries(state.settings).forEach(([key,value]) => { if (form.elements[key]) form.elements[key].type === 'checkbox' ? form.elements[key].checked = Boolean(value) : form.elements[key].value = value; }); }
 function fillContent() { const form = document.getElementById('contentForm'); Object.entries(state.content).forEach(([key,value]) => { if (form.elements[key]) form.elements[key].value = value; }); }
 function dataFrom(form) { return Object.fromEntries(new FormData(form).entries()); }
-function exportData() { const data = { version: 1, exportedAt: new Date().toISOString(), ...state, orders: orders() }; const blob = new Blob([JSON.stringify(data,null,2)], {type:'application/json'}); const url = URL.createObjectURL(blob); const link = document.createElement('a'); link.href = url; link.download = `alwatin-backup-${new Date().toISOString().slice(0,10)}.json`; link.click(); URL.revokeObjectURL(url); toast('تهبطات نسخة البيانات'); }
+function exportData() { const data = { version: 1, exportedAt: new Date().toISOString(), ...state, orders: orders() }; const blob = new Blob([JSON.stringify(data,null,2)], {type:'application/json'}); const url = URL.createObjectURL(blob); const link = document.createElement('a'); link.href = url; link.download = `alwatin-backup-${new Date().toISOString().slice(0,10)}.json`; link.click(); URL.revokeObjectURL(url); toast('تم تنزيل نسخة البيانات'); }
 function renderAll() { renderOverview(); renderProducts(); renderOrders(); fillSettings(); fillContent(); }
 
 function remoteProduct(product) {
@@ -101,7 +101,7 @@ async function bootstrapAdmin() {
   const user = await AlwatinDB.getUser();
   if (!user) { document.getElementById('authDialog').showModal(); return; }
   if (user.email !== AlwatinDB.config.adminEmail) { await AlwatinDB.signOut(); document.getElementById('authDialog').showModal(); return; }
-  remoteUser = user; document.getElementById('logoutButton').hidden = false; await hydrateRemote();
+  remoteUser = user; document.body.classList.remove('auth-locked'); document.getElementById('logoutButton').hidden = false; await hydrateRemote();
 }
 
 document.addEventListener('click', event => {
@@ -121,5 +121,6 @@ document.getElementById('productForm').elements.image.addEventListener('input', 
 document.addEventListener('change', async event => { const select = event.target.closest('[data-order-status]'); if (!select) return; const list = orders(); const order = list.find(item => item.id === select.dataset.orderStatus); if (order) { order.status = select.value; localStorage.setItem(ORDER_KEY, JSON.stringify(list)); renderOrders(); renderOverview(); if (remoteUser && order.remoteId) { try { await AlwatinDB.update('orders', `?id=eq.${encodeURIComponent(order.remoteId)}`, { status: order.status, updated_at: new Date().toISOString() }); } catch { toast('تبدلات محلياً فقط'); } } else toast('تبدلات حالة الطلب'); } });
 document.getElementById('importFile').addEventListener('change', event => { const file = event.target.files[0]; if (!file) return; const reader = new FileReader(); reader.onload = () => { try { const data = JSON.parse(reader.result); if (!Array.isArray(data.products)) throw Error(); state = { products: data.products, settings: { ...defaults.settings, ...data.settings }, content: { ...defaults.content, ...data.content } }; if (data.orders) localStorage.setItem(ORDER_KEY, JSON.stringify(data.orders)); save('تمت استعادة البيانات بنجاح'); renderAll(); } catch { toast('الملف غير صالح'); } }; reader.readAsText(file); });
 document.getElementById('authForm').addEventListener('submit', async event => { event.preventDefault(); const email = new FormData(event.target).get('email'); const message = document.getElementById('authMessage'); try { await AlwatinDB.sendMagicLink(email); message.textContent = 'تم إرسال الرابط إلى بريدك الإلكتروني. افتحه للدخول إلى لوحة التحكم.'; } catch (error) { message.textContent = error?.message || 'تعذر إرسال الرابط. تأكد من إعدادات Supabase.'; } });
+document.getElementById('authDialog').addEventListener('cancel', event => event.preventDefault());
 document.getElementById('logoutButton').addEventListener('click', async () => { await AlwatinDB.signOut(); location.reload(); });
 fillSettings(); fillContent(); renderAll(); bootstrapAdmin();
