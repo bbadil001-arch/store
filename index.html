@@ -16,6 +16,11 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
+    <div class="promo-strip" aria-label="مزايا المتجر">
+      <span><b aria-hidden="true">✦</b><span data-i18n="qualityPromo">جودة مغربية أصيلة</span></span>
+      <span><b aria-hidden="true">▣</b><span data-i18n="codTitle">الدفع عند الاستلام</span></span>
+      <span><b aria-hidden="true">✦</b><span data-i18n="deliveryPromo">توصيل لجميع مدن المغرب</span></span>
+    </div>
     <header class="site-header">
       <a class="brand" href="#home" aria-label="Alwatin">
         <span>
@@ -28,6 +33,9 @@
         <a href="#blog" data-i18n="navBlog">المدونة</a>
         <a href="#cod" data-i18n="navCod">الدفع عند الاستلام</a>
       </nav>
+      <a class="header-search" href="#shop" data-i18n-label="search" aria-label="البحث عن المنتجات">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 5 5"/></svg>
+      </a>
       <div class="header-actions">
         <select id="languageSelect" aria-label="Choose language">
           <option value="ar">العربية</option>
@@ -70,12 +78,12 @@
           <img src="./assets/jabador-olive.png" alt="جبادور مغربي أخضر بتطريز ذهبي" width="1024" height="1536" fetchpriority="high" />
           <div class="hero-caption"><span data-i18n="heritageLine">أصالة مغربية</span><em data-i18n="heritageTitle">أناقة تتوارثها الأجيال.</em></div>
         </div>
-      </section>
-
-      <section class="trust-strip" id="cod">
-        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 5h12v13H2zM14 10h4l4 4v4h-8"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></svg><div><strong data-i18n="codTitle">الدفع عند الاستلام</strong><span data-i18n="codText">اطلب الآن، وادفع عند التوصيل.</span></div></div>
-        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><div><strong data-i18n="deliveryTitle">توصيل داخل المغرب</strong><span data-i18n="deliveryText">التوصيل داخل المغرب.</span></div></div>
-        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M10 5a2 2 0 1 1 2 2v3L2 18v2h20v-2L12 10"/></svg><div><strong data-i18n="sizesTitle">مقاسات واضحة</strong><span data-i18n="sizesText">اختر المقاس المناسب لك.</span></div></div>
+        <div class="hero-benefits" id="cod">
+          <div><span class="hero-benefit-icon" aria-hidden="true">♧</span><strong data-i18n="qualityTitle">جودة مضمونة</strong></div>
+          <div><span class="hero-benefit-icon" aria-hidden="true">▣</span><strong data-i18n="codTitle">الدفع عند الاستلام</strong></div>
+          <div><span class="hero-benefit-icon" aria-hidden="true">▱</span><strong data-i18n="fastDeliveryTitle">توصيل سريع</strong></div>
+          <div><span class="hero-benefit-icon" aria-hidden="true">♡</span><strong data-i18n="supportTitle">خدمة العملاء 7/7</strong></div>
+        </div>
       </section>
 
       <section class="section" id="shop">
