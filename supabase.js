@@ -29,13 +29,13 @@
     history.replaceState({}, document.title, `${location.pathname}${location.search}`);
     return value;
   }
-  async function sendMagicLink(email) {
+  async function sendMagicLink(email, redirectTo = `${location.origin}/admin.html`) {
     return request('/auth/v1/otp', {
       method: 'POST',
       body: JSON.stringify({
         email,
         create_user: true,
-        redirect_to: `${location.origin}/admin.html`
+        redirect_to: redirectTo
       })
     });
   }

@@ -42,6 +42,10 @@
           <option value="fr">Français</option>
           <option value="en">English</option>
         </select>
+        <button class="account-toggle" id="accountToggle" type="button" data-i18n-label="account" aria-label="حسابي">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M4.5 20c.7-3.5 3.1-5.5 7.5-5.5s6.8 2 7.5 5.5"/></svg>
+          <span data-i18n="account">حسابي</span>
+        </button>
         <button class="cart-toggle" type="button" data-i18n-label="cartTitle" aria-label="سلة الطلب" aria-controls="cartPanel" aria-expanded="false">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 3h2l2.5 12h11L21 7H6"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></svg>
           <span class="cart-label" data-i18n="cart">السلة</span>
@@ -57,6 +61,7 @@
           <a href="#shop" data-i18n="navShop">المتجر</a>
           <a href="#blog" data-i18n="navBlog">المدونة</a>
           <a href="#cod" data-i18n="navCod">الدفع عند الاستلام</a>
+          <a href="#account" data-account-open data-i18n="account">حسابي</a>
         </nav>
         <label class="mobile-language"><span data-i18n="languageLabel">اختيار اللغة</span><select id="mobileLanguageSelect" aria-label="اختيار اللغة"><option value="ar">العربية</option><option value="fr">Français</option><option value="en">English</option></select></label>
       </aside>
@@ -78,6 +83,8 @@
           <img src="./assets/jabador-olive.png" alt="جبادور مغربي أخضر بتطريز ذهبي" width="1024" height="1536" fetchpriority="high" />
           <div class="hero-caption"><span data-i18n="heritageLine">أصالة مغربية</span><em data-i18n="heritageTitle">أناقة تتوارثها الأجيال.</em></div>
         </div>
+        <img class="hero-decoration hero-decoration-start" src="./assets/moroccan-pattern-large.svg" alt="" aria-hidden="true" />
+        <img class="hero-decoration hero-decoration-end" src="./assets/moroccan-pattern-mobile.svg" alt="" aria-hidden="true" />
         <div class="hero-benefits" id="cod">
           <div><span class="hero-benefit-icon" aria-hidden="true">♧</span><strong data-i18n="qualityTitle">جودة مضمونة</strong></div>
           <div><span class="hero-benefit-icon" aria-hidden="true">▣</span><strong data-i18n="codTitle">الدفع عند الاستلام</strong></div>
@@ -151,8 +158,12 @@
         </div>
         <div class="footer-column footer-note">
           <h3 data-i18n="footerCodTitle">الدفع عند الاستلام</h3>
-        <p data-i18n="footerCodText">يصل طلبك إلى باب منزلك، وتدفع عند الاستلام.</p>
-          <span class="payment-badge">COD · MAD</span>
+          <p data-i18n="footerCodText">يصل طلبك إلى باب منزلك، وتدفع عند الاستلام.</p>
+          <div class="payment-methods" aria-label="وسائل الدفع">
+            <span class="payment-method visa">VISA<small data-i18n="paymentComingSoon">قريباً</small></span>
+            <span class="payment-method mastercard">Mastercard<small data-i18n="paymentComingSoon">قريباً</small></span>
+            <span class="payment-method cod">COD</span>
+          </div>
         </div>
       </div>
       <div class="footer-bottom">
@@ -205,6 +216,20 @@
         <p data-i18n="successCopy">تم استلام طلبك بنجاح، وسيقوم فريقنا بالتواصل معك قريباً لتأكيد الطلب.</p>
         <div class="modal-actions"><a class="btn primary whatsapp-button" id="whatsappSupport" href="#footer-contact" target="_blank" rel="noopener noreferrer" data-i18n="whatsappSupport">للتواصل معنا عبر الواتساب لمزيد من التفاصيل</a><button class="btn ghost" id="closeSuccessModal" type="button" data-i18n="close">إغلاق</button></div>
       </div>
+    </dialog>
+    <dialog class="account-dialog" id="accountDialog" aria-labelledby="accountTitle">
+      <form method="dialog" id="accountForm">
+        <button class="modal-close" type="submit" value="cancel" data-i18n-label="close" aria-label="إغلاق">×</button>
+        <p class="modal-kicker" data-i18n="accountKicker">حساب الزبون</p>
+        <h2 id="accountTitle" data-i18n="accountTitle">أنشئ حسابك بسهولة</h2>
+        <p class="modal-copy" data-i18n="accountCopy">أدخل بريدك الإلكتروني، وسنرسل إليك رابط دخول آمن ومجاني.</p>
+        <label class="account-email-label">
+          <span data-i18n="emailLabel">البريد الإلكتروني</span>
+          <input id="accountEmail" name="email" type="email" required autocomplete="email" placeholder="name@example.com" data-i18n-placeholder="emailPlaceholder" />
+        </label>
+        <p class="account-message" id="accountMessage" role="status"></p>
+        <button class="btn primary full" type="submit" id="accountSubmit" data-i18n="sendAccountLink">إرسال رابط الدخول</button>
+      </form>
     </dialog>
     <div class="overlay" id="overlay"></div>
 

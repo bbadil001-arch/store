@@ -542,3 +542,34 @@ dialog::backdrop { background: rgba(29, 34, 25, .42); backdrop-filter: blur(4px)
   .hero-benefit-icon { font-size:1.3rem; }
   .hero-benefits strong { font-size:.68rem; line-height:1.45; }
 }
+
+/* Supplied Moroccan ornament assets, tuned to stay decorative and never compete with content. */
+.site-header { background-image:url('./assets/moroccan-pattern-mobile.svg'); background-repeat:no-repeat; background-position:top right; background-size:190px 190px; }
+.hero-decoration { position:absolute; z-index:2; width:clamp(170px,22vw,310px); height:auto; pointer-events:none; opacity:.22; mix-blend-mode:screen; }
+.hero-decoration-start { top:-95px; inset-inline-start:-125px; }
+.hero-decoration-end { top:-74px; inset-inline-end:-95px; transform:rotate(180deg); }
+.payment-methods { display:flex; flex-wrap:wrap; align-items:flex-start; gap:8px; margin-top:17px; }
+.payment-method { display:inline-flex; flex-direction:column; align-items:center; justify-content:center; min-width:66px; min-height:39px; padding:4px 8px; border:1px solid #ddd5c2; border-radius:6px; background:#fffdf7; color:#283021; font-family:Arial,sans-serif; font-size:.72rem; font-weight:800; line-height:1.2; text-align:center; }
+.payment-method.visa { color:#1d4c91; font-size:.9rem; }
+.payment-method.mastercard { color:#5b3d2f; font-size:.62rem; }
+.payment-method.cod { color:#71603b; background:#f4edda; }
+.payment-method small { margin-top:3px; color:#a17e3f; font-family:Tahoma,'Segoe UI',Arial,sans-serif; font-size:.62rem; font-weight:700; }
+.account-toggle { display:inline-flex; align-items:center; gap:7px; min-height:44px; padding:4px 8px; border:0; background:transparent; color:var(--emerald); }
+.account-toggle svg { width:25px; height:25px; }
+.account-toggle span { font-size:.875rem; }
+.account-dialog { width:min(470px,calc(100% - 32px)); border-radius:18px; }
+.account-dialog form { position:relative; padding:34px; }
+.account-dialog h2 { color:var(--emerald-dark); font-size:1.45rem; line-height:1.6; }
+.account-email-label { display:grid; gap:7px; margin-top:22px; color:var(--ink); font-size:.875rem; font-weight:650; }
+.account-message { min-height:25px; margin:12px 0 0; color:var(--emerald-dark); font-size:.85rem; line-height:1.6; }
+.account-message.error { color:#9b4c3c; }
+@media (max-width:700px) {
+  .site-header { background-size:130px 130px; }
+  .hero-decoration { width:155px; opacity:.18; }
+  .hero-decoration-start { top:-35px; inset-inline-start:-88px; }
+  .hero-decoration-end { top:-28px; inset-inline-end:-78px; }
+  .account-toggle { display:none; }
+  .account-dialog form { padding:28px 22px; }
+  .account-dialog h2 { font-size:1.2rem; }
+  .payment-method { min-width:61px; }
+}

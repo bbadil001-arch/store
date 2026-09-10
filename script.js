@@ -21,6 +21,15 @@ const translations = {
     fastDeliveryTitle: "توصيل سريع",
     supportTitle: "خدمة العملاء 7/7",
     search: "البحث عن المنتجات",
+    account: "حسابي",
+    accountKicker: "حساب الزبون",
+    accountTitle: "أنشئ حسابك بسهولة",
+    accountCopy: "أدخل بريدك الإلكتروني، وسنرسل إليك رابط دخول آمن ومجاني.",
+    emailLabel: "البريد الإلكتروني",
+    emailPlaceholder: "name@example.com",
+    sendAccountLink: "إرسال رابط الدخول",
+    accountLinkSent: "تم إرسال رابط الدخول إلى بريدك الإلكتروني.",
+    accountUnavailable: "ميزة الحساب تحتاج إلى إعداد Supabase Auth أولاً.",
     sizesTitle: "مقاسات واضحة",
     sizesText: "اختر المقاس المناسب لك.",
     shopEyebrow: "تصنيفات المتجر",
@@ -79,7 +88,8 @@ const translations = {
     close: "إغلاق",
     remove: "حذف",
     codBadge: "عند الاستلام",
-    demoImages: "صور توضيحية للمجموعة"
+    demoImages: "صور توضيحية للمجموعة",
+    paymentComingSoon: "قريباً"
   },
   fr: {
     brand: "الوَتِين",
@@ -103,6 +113,15 @@ const translations = {
     fastDeliveryTitle: "Livraison rapide",
     supportTitle: "Service client 7/7",
     search: "Rechercher des produits",
+    account: "Mon compte",
+    accountKicker: "Compte client",
+    accountTitle: "Créez votre compte facilement",
+    accountCopy: "Saisissez votre e-mail et recevez un lien de connexion sécurisé et gratuit.",
+    emailLabel: "Adresse e-mail",
+    emailPlaceholder: "nom@exemple.com",
+    sendAccountLink: "Envoyer le lien de connexion",
+    accountLinkSent: "Le lien de connexion a été envoyé à votre adresse e-mail.",
+    accountUnavailable: "La fonctionnalité de compte nécessite d’abord la configuration de Supabase Auth.",
     sizesTitle: "Tailles claires",
     sizesText: "Trouvez votre taille.",
     shopEyebrow: "Catégories",
@@ -161,7 +180,8 @@ const translations = {
     close: "Fermer",
     remove: "Retirer",
     codBadge: "À la livraison",
-    demoImages: "Visuels illustratifs de la collection"
+    demoImages: "Visuels illustratifs de la collection",
+    paymentComingSoon: "Bientôt"
   },
   en: {
     brand: "الوَتِين",
@@ -185,6 +205,15 @@ const translations = {
     fastDeliveryTitle: "Fast delivery",
     supportTitle: "Customer service 7/7",
     search: "Search products",
+    account: "My account",
+    accountKicker: "Customer account",
+    accountTitle: "Create your account easily",
+    accountCopy: "Enter your email and we will send you a secure, free sign-in link.",
+    emailLabel: "Email address",
+    emailPlaceholder: "name@example.com",
+    sendAccountLink: "Send sign-in link",
+    accountLinkSent: "The sign-in link was sent to your email address.",
+    accountUnavailable: "Customer accounts require Supabase Auth to be configured first.",
     sizesTitle: "Clear sizing",
     sizesText: "Find your perfect fit.",
     shopEyebrow: "Shop categories",
@@ -243,7 +272,8 @@ const translations = {
     close: "Close",
     remove: "Remove",
     codBadge: "COD",
-    demoImages: "Illustrative collection images"
+    demoImages: "Illustrative collection images",
+    paymentComingSoon: "Coming soon"
   }
 };
 
@@ -303,6 +333,9 @@ const menuToggle = document.getElementById("menuToggle");
 const mobileMenu = document.getElementById("mobileMenu");
 const mobileMenuBackdrop = document.getElementById("mobileMenuBackdrop");
 const mobileLanguageSelect = document.getElementById("mobileLanguageSelect");
+const accountDialog = document.getElementById("accountDialog");
+const accountForm = document.getElementById("accountForm");
+const accountMessage = document.getElementById("accountMessage");
 
 function t(key) {
   return translations[currentLang][key] || key;
@@ -320,6 +353,7 @@ function applyLanguage(lang) {
     node.textContent = t(node.dataset.i18n);
   });
   document.querySelectorAll("[data-i18n-label]").forEach((node) => node.setAttribute("aria-label", t(node.dataset.i18nLabel)));
+  document.querySelectorAll("[data-i18n-placeholder]").forEach((node) => node.setAttribute("placeholder", t(node.dataset.i18nPlaceholder)));
   document.title = `${t("brand")} | Alwatin — ${t("brandSub")}`;
   renderFilters();
   renderProducts();
@@ -481,6 +515,19 @@ function closeMobileMenu() {
   menuToggle.setAttribute("aria-expanded", "false");
 }
 
+function openAccountDialog() {
+  if (!accountDialog) return;
+  accountMessage.textContent = "";
+  accountMessage.classList.remove("error");
+  if (accountDialog.showModal) accountDialog.showModal();
+  else accountDialog.setAttribute("open", "");
+  document.getElementById("accountEmail")?.focus();
+}
+
+function closeAccountDialog() {
+  if (accountDialog?.open) accountDialog.close();
+}
+
 function updateWhatsAppSupportLink() {
   if (!whatsappSupport) return;
   let number = window.ALWATIN_SUPABASE?.whatsapp || "";
@@ -535,12 +582,39 @@ menuToggle?.addEventListener("click", openMobileMenu);
 document.getElementById("closeMobileMenu")?.addEventListener("click", closeMobileMenu);
 mobileMenuBackdrop?.addEventListener("click", closeMobileMenu);
 document.querySelectorAll(".mobile-nav a").forEach((link) => link.addEventListener("click", closeMobileMenu));
+document.getElementById("accountToggle")?.addEventListener("click", openAccountDialog);
+document.querySelectorAll("[data-account-open]").forEach((link) => link.addEventListener("click", (event) => { event.preventDefault(); closeMobileMenu(); openAccountDialog(); }));
 categoryPrev?.addEventListener("click", () => scrollCategoryCarousel(-1));
 categoryNext?.addEventListener("click", () => scrollCategoryCarousel(1));
 categoryFilters?.addEventListener("scroll", updateCategoryCarousel, { passive: true });
 window.addEventListener("resize", updateCategoryCarousel);
 document.getElementById("checkoutNowButton")?.addEventListener("click", () => { closeAddCartChoice(); openCart(); document.querySelector('#checkoutForm input[name="name"]')?.focus(); });
 document.getElementById("closeSuccessModal")?.addEventListener("click", () => successModal?.close());
+
+accountForm?.addEventListener("submit", async (event) => {
+  event.preventDefault();
+  const email = new FormData(event.target).get("email") || document.getElementById("accountEmail")?.value;
+  if (!email) return;
+  const submitButton = document.getElementById("accountSubmit");
+  if (!window.AlwatinDB) {
+    accountMessage.textContent = t("accountUnavailable");
+    accountMessage.classList.add("error");
+    return;
+  }
+  submitButton.disabled = true;
+  accountMessage.textContent = "";
+  accountMessage.classList.remove("error");
+  try {
+    await AlwatinDB.sendMagicLink(email, `${location.origin}/`);
+    accountMessage.textContent = t("accountLinkSent");
+    event.target.reset();
+  } catch (error) {
+    accountMessage.textContent = error?.message || t("accountUnavailable");
+    accountMessage.classList.add("error");
+  } finally {
+    submitButton.disabled = false;
+  }
+});
 
 document.getElementById("checkoutForm").addEventListener("submit", async (event) => {
   event.preventDefault();
