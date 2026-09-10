@@ -486,9 +486,10 @@ dialog::backdrop { background: rgba(29, 34, 25, .42); backdrop-filter: blur(4px)
 .site-header { max-width:none; min-height:92px; padding-block:10px; background:rgba(250,248,243,.94); border-bottom-color:rgba(177,150,98,.2); }
 .header-search { display:inline-grid; place-items:center; flex-shrink:0; width:46px; height:46px; border:1px solid var(--line); border-radius:50%; color:var(--emerald-dark); background:rgba(255,254,250,.72); }
 .header-search svg { width:24px; height:24px; }
-.site-header .brand { position:relative; z-index:1; margin-inline:auto; }
+.site-header .brand { position:absolute; z-index:1; left:50%; transform:translateX(-50%); margin:0; }
 .site-header .brand-logo { width:164px; height:58px; }
-.site-header .nav { position:absolute; inset-inline-start:var(--gutter); }
+.site-header .nav { position:static; margin-inline:auto; }
+.site-header .header-search { position:absolute; inset-inline-start:var(--gutter); }
 .site-header .header-actions { position:absolute; inset-inline-end:var(--gutter); }
 .hero { position:relative; display:block; min-height:min(790px,calc(100vh - 134px)); border-radius:0; background:#332d21; }
 .hero-visual { position:absolute; inset:0; min-height:0; height:100%; }
