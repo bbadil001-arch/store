@@ -422,7 +422,7 @@ dialog::backdrop { background: rgba(29, 34, 25, .42); backdrop-filter: blur(4px)
     -webkit-backdrop-filter: blur(18px);
   }
   .mobile-menu-backdrop {
-    background: rgba(255, 255, 255, .08);
+    background: rgba(255, 255, 255, .80);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
   }

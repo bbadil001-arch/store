@@ -235,12 +235,14 @@ let products = [
   { id: 3, category: "jabador", price: 520, label: { ar: "جبادور رجالي", fr: "Jabador homme", en: "Men's Jabador" }, desc: { ar: "إطلالة رجالية بطابع مغربي أصيل.", fr: "Une allure masculine au caractère marocain.", en: "A traditional Moroccan look for family occasions." } },
   { id: 4, category: "gandoura", price: 310, label: { ar: "قندورة رجالية", fr: "Gandoura homme", en: "Men's Gandoura" }, desc: { ar: "تصميم بسيط لإطلالة يومية مريحة.", fr: "Un style simple pour le quotidien.", en: "A relaxed silhouette for everyday wear." } },
   { id: 5, category: "kandrissi", price: 890, label: { ar: "سروال قندريسي", fr: "Sarouel kandrissi", en: "Kandrissi Trousers" }, desc: { ar: "سروال مغربي بقصة واسعة ولمسة تقليدية.", fr: "Un sarouel marocain ample au style traditionnel.", en: "Relaxed Moroccan trousers with traditional styling." } },
-  { id: 6, category: "accessories", price: 180, label: { ar: "بلغة مغربية", fr: "Babouche marocaine", en: "Moroccan Babouche" }, desc: { ar: "اللمسة الأخيرة لإطلالتك التقليدية.", fr: "La touche finale de votre tenue traditionnelle.", en: "The finishing touch for your traditional outfit." } }
+  { id: 6, category: "accessories", price: 180, label: { ar: "بلغة مغربية", fr: "Babouche marocaine", en: "Moroccan Babouche" }, desc: { ar: "اللمسة الأخيرة لإطلالتك التقليدية.", fr: "La touche finale de votre tenue traditionnelle.", en: "The finishing touch for your traditional outfit." } },
+  { id: 7, category: "modern-trousers", price: 450, label: { ar: "سروال عصري", fr: "Pantalon marocain moderne", en: "Modern Moroccan Trousers" }, desc: { ar: "سروال أنيق بقصة عصرية ولمسة مغربية.", fr: "Un pantalon élégant à la coupe moderne et à l’esprit marocain.", en: "Elegant trousers with a modern cut and Moroccan character." } },
+  { id: 8, category: "arabic-shirt", price: 260, label: { ar: "قميص عربي", fr: "Chemise arabe", en: "Arabic Shirt" }, desc: { ar: "قميص عربي مريح لإطلالة يومية أنيقة.", fr: "Une chemise arabe confortable pour un style quotidien élégant.", en: "A comfortable Arabic shirt for an elegant everyday look." } }
 ];
 
-const categories = ["djellaba", "jabador", "gandoura", "caftan", "kandrissi", "accessories"];
-const productImages = { caftan: "assets/caftan-men-cream.png", djellaba: "assets/djellaba-ivory.png", jabador: "assets/jabador-olive.png", gandoura: "assets/gandoura-blue.png", kandrissi: "assets/kandrissi-sand.png", accessories: "assets/babouche-tan.png" };
-const categoryPageLinks = { djellaba: "./djellaba-marocaine/", jabador: "./jabador-marocain/", gandoura: "./gandoura-homme/", caftan: "./caftan-marocain-homme/", kandrissi: "./sarouel-kandrissi/", accessories: "./babouches-marocaines/" };
+const categories = ["djellaba", "jabador", "gandoura", "caftan", "kandrissi", "accessories", "modern-trousers", "arabic-shirt"];
+const productImages = { caftan: "assets/caftan-men-cream.png", djellaba: "assets/djellaba-ivory.png", jabador: "assets/jabador-olive.png", gandoura: "assets/gandoura-blue.png", kandrissi: "assets/kandrissi-sand.png", accessories: "assets/babouche-tan.png", "modern-trousers": "assets/kandrissi-sand.png", "arabic-shirt": "assets/gandoura-blue.png" };
+const categoryPageLinks = { djellaba: "./djellaba-marocaine/", jabador: "./jabador-marocain/", gandoura: "./gandoura-homme/", caftan: "./caftan-marocain-homme/", kandrissi: "./sarouel-kandrissi/", accessories: "./babouches-marocaines/", "modern-trousers": "#productGrid", "arabic-shirt": "#productGrid" };
 const blogPostLinks = { SEO: "./blog/choisir-djellaba-marocaine/", Guide: "./blog/choisir-caftan-marocain-homme/", Compare: "./blog/difference-djellaba-caftan-gandoura-kandrissi/" };
 try {
   const adminState = JSON.parse(localStorage.getItem("alwatin-admin-state") || "null");
@@ -249,9 +251,9 @@ try {
   }
 } catch { /* Keep the built-in catalog when local storage is unavailable. */ }
 const categoryLabels = {
-  ar: { caftan: "قفطان", djellaba: "جلابة", jabador: "جبادور", gandoura: "قندورة", kandrissi: "سروال قندريسي", accessories: "إكسسوارات" },
-  fr: { caftan: "Caftan", djellaba: "Djellaba", jabador: "Jabador", gandoura: "Gandoura", kandrissi: "Kandrissi", accessories: "Accessoires" },
-  en: { caftan: "Caftan", djellaba: "Djellaba", jabador: "Jabador", gandoura: "Gandoura", kandrissi: "Kandrissi", accessories: "Accessories" }
+  ar: { caftan: "قفطان", djellaba: "جلابة", jabador: "جبادور", gandoura: "قندورة", kandrissi: "سروال قندريسي", accessories: "إكسسوارات", "modern-trousers": "سروال عصري", "arabic-shirt": "قميص عربي" },
+  fr: { caftan: "Caftan", djellaba: "Djellaba", jabador: "Jabador", gandoura: "Gandoura", kandrissi: "Kandrissi", accessories: "Accessoires", "modern-trousers": "Pantalon moderne", "arabic-shirt": "Chemise arabe" },
+  en: { caftan: "Caftan", djellaba: "Djellaba", jabador: "Jabador", gandoura: "Gandoura", kandrissi: "Kandrissi", accessories: "Accessories", "modern-trousers": "Modern Trousers", "arabic-shirt": "Arabic Shirt" }
 };
 
 const blogPosts = [

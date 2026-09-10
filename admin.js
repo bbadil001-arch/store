@@ -1,6 +1,12 @@
 const KEY = 'alwatin-admin-state';
 const ORDER_KEY = 'alwatin-orders';
-const categories = { caftan: 'قفطان', djellaba: 'جلابة', jabador: 'جبادور', gandoura: 'قندورة', kandrissi: 'سروال قندريسي', accessories: 'إكسسوارات' };
+const categories = { caftan: 'قفطان', djellaba: 'جلابة', jabador: 'جبادور', gandoura: 'قندورة', kandrissi: 'سروال قندريسي', accessories: 'إكسسوارات', 'modern-trousers': 'سروال عصري', 'arabic-shirt': 'قميص عربي' };
+const extraCategoryOptions = [['modern-trousers', 'سروال عصري'], ['arabic-shirt', 'قميص عربي']];
+document.querySelectorAll('#categoryFilter, #productForm select[name="category"]').forEach(select => {
+  extraCategoryOptions.forEach(([value, label]) => {
+    if (!select.querySelector(`option[value="${value}"]`)) select.insertAdjacentHTML('beforeend', `<option value="${value}">${label}</option>`);
+  });
+});
 const statuses = { new: 'جديد', confirmed: 'مؤكد', shipping: 'قيد التوصيل', completed: 'مكتمل', cancelled: 'ملغى' };
 const seedProducts = [
   [1,'caftan',690,'قفطان رجالي مغربي','Caftan marocain pour homme',"Men's Moroccan Caftan",'assets/caftan-men-cream.png'],
@@ -8,7 +14,9 @@ const seedProducts = [
   [3,'jabador',520,'جبادور رجالي','Jabador homme',"Men's Jabador",'assets/jabador-olive.png'],
   [4,'gandoura',310,'قندورة رجالية','Gandoura homme',"Men's Gandoura",'assets/gandoura-blue.png'],
   [5,'kandrissi',890,'سروال قندريسي','Sarouel kandrissi','Kandrissi Trousers','assets/kandrissi-sand.png'],
-  [6,'accessories',180,'بلغة مغربية','Babouche marocaine','Moroccan Babouche','assets/babouche-tan.png']
+  [6,'accessories',180,'بلغة مغربية','Babouche marocaine','Moroccan Babouche','assets/babouche-tan.png'],
+  [7,'modern-trousers',450,'سروال عصري','Pantalon marocain moderne','Modern Moroccan Trousers','assets/kandrissi-sand.png'],
+  [8,'arabic-shirt',260,'قميص عربي','Chemise arabe','Arabic Shirt','assets/gandoura-blue.png']
 ].map(([id,category,price,ar,fr,en,image]) => ({ id, category, price, comparePrice: 0, stock: 15, sku: `AW-${category.toUpperCase()}-${id}`, image, sizes: category === 'accessories' ? ['40','41','42','43','44','45'] : ['S','M','L','XL'], active: true, featured: id < 4, name: { ar, fr, en }, desc: { ar: 'إطلالة مغربية أصيلة لكل مناسبة.', fr: 'Une tenue marocaine authentique pour chaque occasion.', en: 'Authentic Moroccan style for every occasion.' }, seoTitle: ar, seoDescription: 'لباس مغربي رجالي أنيق من الوَتِين.' }));
 const defaults = {
   settings: { storeName: 'الوَتِين', tagline: 'لباس مغربي تقليدي', phone: '', whatsapp: '', email: '', payment: 'cod', deliveryFee: 35, freeDeliveryFrom: 800, deliveryTime: '24 إلى 72 ساعة', deliveryAreas: 'جميع المدن المغربية', currency: 'MAD', defaultLanguage: 'ar', languagesAr: true, languagesFr: true, languagesEn: true, instagram: '', facebook: '' },
