@@ -1,14 +1,14 @@
 // Compact product details, sharing, saved favourites and size-aware cart entries.
 const productTranslations = {
   ar: {
-    size: 'المقاس', colors: 'الألوان', pleats: 'تفاصيل الخياطة', backShop: 'الرجوع للمتجر', productDetails: 'تفاصيل المنتوج',
-    favourite: 'حفظ فالمفضلة', unfavourite: 'حذف من المفضلة', shareProduct: 'مشاركة المنتوج',
-    linkCopied: 'تنسخ رابط المنتوج.', copyLink: 'رابط المنتوج', noReviews: 'ما كايناش تقييمات بعد',
-    viewOutfit: 'الإطلالة', viewCollar: 'التفاصيل العلوية', viewFabric: 'تفاصيل الثوب', viewLower: 'التفاصيل السفلية',
-    previousPhoto: 'الصورة السابقة', nextPhoto: 'الصورة التالية', galleryLabel: 'صور المنتوج',
-    detailCodText: 'اطلب الآن، وخلّص عند التوصيل.', unavailableProduct: 'هاد المنتوج غير متوفر.',
-    viewProduct: 'شوف المنتوج', chosenSize: 'المقاس المختار', imageCounter: 'الصورة',
-    languageLabel: 'اختار اللغة', navLabel: 'القائمة الرئيسية', categoryLabel: 'تصنيفات المنتوجات'
+    size: 'المقاس', colors: 'الألوان', pleats: 'تفاصيل الخياطة', backShop: 'العودة إلى المتجر', productDetails: 'تفاصيل المنتج',
+    favourite: 'حفظ في المفضلة', unfavourite: 'إزالة من المفضلة', shareProduct: 'مشاركة المنتج',
+    linkCopied: 'تم نسخ رابط المنتج.', copyLink: 'رابط المنتج', noReviews: 'لا توجد تقييمات بعد',
+    viewOutfit: 'الإطلالة', viewCollar: 'التفاصيل العلوية', viewFabric: 'تفاصيل القماش', viewLower: 'التفاصيل السفلية',
+    previousPhoto: 'الصورة السابقة', nextPhoto: 'الصورة التالية', galleryLabel: 'صور المنتج',
+    detailCodText: 'اطلب الآن وادفع عند التوصيل.', unavailableProduct: 'هذا المنتج غير متوفر.',
+    viewProduct: 'عرض المنتج', chosenSize: 'المقاس المحدد', imageCounter: 'الصورة', buyNow: 'شراء الآن',
+    languageLabel: 'اختيار اللغة', navLabel: 'القائمة الرئيسية', categoryLabel: 'تصنيفات المنتجات'
   },
   fr: {
     size: 'Taille', colors: 'Couleurs', pleats: 'Détails de couture', backShop: 'Retour à la boutique', productDetails: 'Détails du produit',
@@ -118,7 +118,7 @@ function renderProductPage() {
         ${product.colors?.length ? `<div class="detail-attribute"><strong>${t('colors')}</strong><span>${product.colors.join(' · ')}</span></div>` : ''}
         ${product.pleats ? `<div class="detail-attribute"><strong>${t('pleats')}</strong><span>${product.pleats}</span></div>` : ''}
         <fieldset class="detail-sizes"><legend>${t('size')}</legend><div class="size-options" dir="ltr">${sizesFor(product).map(value => `<label class="size-option"><input type="radio" name="productSize" value="${value}" ${size === value ? 'checked' : ''} /><span>${value}</span></label>`).join('')}</div></fieldset>
-        <button class="btn primary detail-add" id="detailAdd" type="button" data-add="${product.id}" data-size="${size}">${t('add')}</button>
+        <button class="btn primary detail-add" id="detailAdd" type="button" data-add="${product.id}" data-size="${size}">${t('buyNow')}</button>
         <div class="detail-delivery">${productIcon('truck')}<div><strong>${t('codTitle')}</strong><p>${t('detailCodText')}</p><small>${t('deliveryTitle')}</small></div></div>
         <p class="detail-image-note">${t('demoImages')}</p>
         <p class="detail-status" id="detailStatus" role="status" aria-live="polite"></p>

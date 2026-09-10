@@ -111,7 +111,7 @@ alter table public.orders enable row level security;
 alter table public.order_items enable row level security;
 
 create or replace function public.is_admin() returns boolean language sql stable security definer set search_path = public as $$
-  select auth.email() = 'bbadil001@gmail.com' or exists (select 1 from public.admin_users where user_id = auth.uid());
+  select auth.email() = 'admin@example.com' or exists (select 1 from public.admin_users where user_id = auth.uid());
 $$;
 
 drop policy if exists "public can view active products" on public.products;

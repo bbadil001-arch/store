@@ -7,39 +7,39 @@ const translations = {
     navCod: "الدفع عند الاستلام",
     cart: "السلة",
     eyebrow: "لباس مغربي أصيل",
-    heroTitle: "أناقة مغربية، حتى لباب دارك.",
-    heroText: "اكتشف الجلابة، الجبادور، القندورة والقفطان. اختيارات تقليدية وعصرية للعيد، الأعراس وكل مناسباتك.",
+    heroTitle: "أناقة مغربية تصل إلى باب منزلك.",
+    heroText: "اكتشف الجلابة والجبادور والقندورة والقفطان. أزياء تقليدية وعصرية للعيد والأعراس وجميع مناسباتك.",
     shopNow: "اكتشف المجموعة",
     readGuides: "اقرأ الدلائل",
     codTitle: "الدفع عند الاستلام",
-    codText: "اطلب الآن، وخلّص عند التوصيل.",
+    codText: "اطلب الآن، وادفع عند التوصيل.",
     deliveryTitle: "توصيل داخل المغرب",
     deliveryText: "التوصيل داخل المغرب.",
     sizesTitle: "مقاسات واضحة",
-    sizesText: "اختار المقاس المناسب ليك.",
+    sizesText: "اختر المقاس المناسب لك.",
     shopEyebrow: "تصنيفات المتجر",
     shopTitle: "مختارات المتجر",
     shopText: "لباس مغربي لكل مناسبة.",
     seoEyebrow: "دليلك للأناقة المغربية",
     seoTitle: "من أول إلهام، للاختيار المناسب.",
-    seoText: "تعرّف على الأثواب والموديلات، اكتشف المجموعة اللي كتناسبك، وكمل طلبك بالدفع عند الاستلام.",
-    mapOne: "استلهم من دلائل اللباس المغربي",
-    mapTwo: "اكتشف المجموعة المناسبة ليك",
-    mapThree: "اختار طلبك وخلّص عند الاستلام",
+    seoText: "تعرّف على الأقمشة والتصاميم، واكتشف المجموعة التي تناسبك، ثم أكمل طلبك بالدفع عند الاستلام.",
+    mapOne: "استلهم من أدلة الأزياء المغربية",
+    mapTwo: "اكتشف المجموعة المناسبة لك",
+    mapThree: "اختر طلبك وادفع عند الاستلام",
     blogEyebrow: "المدونة",
     blogTitle: "دلائل ونصائح من المدونة",
-    blogText: "كل ما تحتاجه لاختيار وتنسيق لباسك المغربي.",
-    add: "أضف للسلة",
-    viewProducts: "شوف المنتجات",
+    blogText: "كل ما تحتاجه لاختيار وتنسيق أزيائك المغربية.",
+    add: "إضافة إلى السلة",
+    viewProducts: "عرض المنتجات",
     cartTitle: "سلة الطلب",
     total: "المجموع",
     nameLabel: "الاسم الكامل",
     phoneLabel: "رقم الهاتف",
     cityLabel: "المدينة والعنوان",
-    checkoutNote: "الدفع عند الاستلام. غادي نتاصلوا بك لتأكيد الطلب والتوصيل.",
-    placeOrder: "تجربة الطلب",
-    successMessage: "تسجل الطلب بنجاح. غادي نتاصلوا بك للتأكيد.",
-    emptyCart: "السلة فارغة حاليا.",
+    checkoutNote: "الدفع عند الاستلام. سيتواصل معك فريقنا لتأكيد الطلب والتوصيل.",
+    placeOrder: "تأكيد الطلب",
+    successMessage: "تم تسجيل الطلب بنجاح. سنتواصل معك لتأكيده.",
+    emptyCart: "السلة فارغة حالياً.",
     all: "الكل",
     imageSoon: "مساحة الصورة",
     heritageLine: "أصالة مغربية",
@@ -55,8 +55,21 @@ const translations = {
     footerReturns: "سياسة الاستبدال والاسترجاع",
     footerTerms: "الشروط والأحكام",
     footerCodTitle: "الدفع عند الاستلام",
-    footerCodText: "طلبك كيوصلك حتى لباب دارك، وكتخلص عند الاستلام.",
+    footerCodText: "يصل طلبك إلى باب منزلك، وتدفع عند الاستلام.",
     copyright: "© 2026 الوَتِين - جميع الحقوق محفوظة.",
+    menuOpen: "فتح القائمة",
+    menuTitle: "القائمة الرئيسية",
+    languageLabel: "اختيار اللغة",
+    modalKicker: "اختيارك",
+    addCartQuestion: "هل ترغب في إضافة هذا المنتج فقط أم ترغب في مواصلة التسوق وإضافة منتجات أخرى؟",
+    addCartCopy: "تمت إضافة المنتج إلى سلتك.",
+    continueShopping: "مواصلة التسوق",
+    checkoutNow: "إتمام الطلب الآن",
+    buyNow: "شراء الآن",
+    successTitle: "شكراً لك على ثقتك بنا وشراء منتجاتنا!",
+    successCopy: "تم استلام طلبك بنجاح، وسيقوم فريقنا بالتواصل معك قريباً لتأكيد الطلب.",
+    whatsappSupport: "للتواصل معنا عبر الواتساب لمزيد من التفاصيل",
+    whatsappMessage: "مرحباً، أود الاستفسار عن طلبي.",
     close: "إغلاق",
     remove: "حذف",
     codBadge: "عند الاستلام",
@@ -109,6 +122,19 @@ const translations = {
     heritageTitle: "La tradition se perpétue.",
     viewAll: "Tout voir",
     backTop: "Haut de page",
+    menuOpen: "Ouvrir le menu",
+    menuTitle: "Menu principal",
+    languageLabel: "Choisir la langue",
+    modalKicker: "Votre choix",
+    addCartQuestion: "Souhaitez-vous ajouter uniquement ce produit ou continuer vos achats ?",
+    addCartCopy: "Le produit a été ajouté à votre panier.",
+    continueShopping: "Continuer mes achats",
+    checkoutNow: "Finaliser la commande",
+    buyNow: "Acheter maintenant",
+    successTitle: "Merci pour votre confiance et votre achat !",
+    successCopy: "Votre commande a bien été reçue. Notre équipe vous contactera bientôt pour la confirmer.",
+    whatsappSupport: "Nous contacter sur WhatsApp pour plus de détails",
+    whatsappMessage: "Bonjour, je souhaite obtenir des informations sur ma commande.",
     footerTagline: "Une élégance transmise de génération en génération.",
     footerQuickLinks: "Liens rapides",
     footerAbout: "À propos",
@@ -172,6 +198,19 @@ const translations = {
     heritageTitle: "Tradition lives on.",
     viewAll: "View all",
     backTop: "Back to top",
+    menuOpen: "Open menu",
+    menuTitle: "Main menu",
+    languageLabel: "Choose language",
+    modalKicker: "Your choice",
+    addCartQuestion: "Would you like to add only this product or continue shopping?",
+    addCartCopy: "The product has been added to your cart.",
+    continueShopping: "Continue shopping",
+    checkoutNow: "Checkout now",
+    buyNow: "Buy now",
+    successTitle: "Thank you for trusting us and shopping with us!",
+    successCopy: "Your order was received successfully. Our team will contact you soon to confirm it.",
+    whatsappSupport: "Contact us on WhatsApp for more details",
+    whatsappMessage: "Hello, I would like more information about my order.",
     footerTagline: "Elegance passed down through generations.",
     footerQuickLinks: "Quick links",
     footerAbout: "About us",
@@ -217,8 +256,8 @@ const categoryLabels = {
 
 const blogPosts = [
   { tag: "SEO", product: "djellaba", title: { ar: "أفضل جلابة مغربية للعيد 2026", fr: "Meilleure djellaba marocaine pour l'Aid 2026", en: "Best Moroccan Djellaba for Eid 2026" }, desc: { ar: "دليل يشرح الأثواب، الألوان، والموديلات المناسبة للعيد.", fr: "Guide des tissus, couleurs et modèles adaptés à l'Aid.", en: "A guide to fabrics, colors and styles for Eid." } },
-  { tag: "Guide", product: "caftan", title: { ar: "كيف تختار قفطان رجالي مغربي للعرس؟", fr: "Comment choisir un caftan homme pour un mariage ?", en: "How to choose a men's caftan for a wedding" }, desc: { ar: "دليل يساعدك تختار بين القفطان الرجالي البسيط، العصري والفاخر.", fr: "Aide à choisir entre simple, moderne et luxe.", en: "Helps shoppers choose between simple, modern and luxury." } },
-  { tag: "Compare", product: "gandoura", title: { ar: "الفرق بين القفطان، الجلابة، القندورة والسروال القندريسي", fr: "Différence entre caftan, djellaba, gandoura et kandrissi", en: "Caftan, djellaba, gandoura and kandrissi differences" }, desc: { ar: "تعرّف على خصائص كل لباس وكيف تختار المناسب ليك.", fr: "Découvrez les particularités de chaque tenue.", en: "Learn what makes each garment distinct." } }
+  { tag: "Guide", product: "caftan", title: { ar: "كيف تختار قفطاناً مغربياً رجاليًا للعرس؟", fr: "Comment choisir un caftan homme pour un mariage ?", en: "How to choose a men's caftan for a wedding" }, desc: { ar: "دليل يساعدك على الاختيار بين القفطان الرجالي البسيط والعصري والفخم.", fr: "Aide à choisir entre simple, moderne et luxe.", en: "Helps shoppers choose between simple, modern and luxury." } },
+  { tag: "Compare", product: "gandoura", title: { ar: "الفرق بين القفطان والجلابة والقندورة والسروال القندريسي", fr: "Différence entre caftan, djellaba, gandoura et kandrissi", en: "Caftan, djellaba, gandoura and kandrissi differences" }, desc: { ar: "تعرّف على خصائص كل زي وكيف تختار الزي المناسب لك.", fr: "Découvrez les particularités de chaque tenue.", en: "Learn what makes each garment distinct." } }
 ];
 
 let currentLang = "ar";
@@ -235,6 +274,13 @@ const cartItems = document.getElementById("cartItems");
 const cartCount = document.getElementById("cartCount");
 const cartTotal = document.getElementById("cartTotal");
 const successMessage = document.getElementById("successMessage");
+const addCartModal = document.getElementById("addCartModal");
+const successModal = document.getElementById("successModal");
+const whatsappSupport = document.getElementById("whatsappSupport");
+const menuToggle = document.getElementById("menuToggle");
+const mobileMenu = document.getElementById("mobileMenu");
+const mobileMenuBackdrop = document.getElementById("mobileMenuBackdrop");
+const mobileLanguageSelect = document.getElementById("mobileLanguageSelect");
 
 function t(key) {
   return translations[currentLang][key] || key;
@@ -244,6 +290,7 @@ function applyLanguage(lang) {
   currentLang = translations[lang] ? lang : "ar";
   lang = currentLang;
   languageSelect.value = lang;
+  if (mobileLanguageSelect) mobileLanguageSelect.value = lang;
   document.documentElement.lang = lang;
   document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
   document.body.dir = lang === "ar" ? "rtl" : "ltr";
@@ -256,6 +303,7 @@ function applyLanguage(lang) {
   renderProducts();
   renderBlog();
   renderCart();
+  updateWhatsAppSupportLink();
   if (typeof renderProductPage === "function") renderProductPage();
 }
 
@@ -283,7 +331,7 @@ function renderProducts() {
         <h3><a href="${categoryPageLinks[product.category]}" data-product-link="${product.id}">${product.label[currentLang]}</a></h3>
         <span class="price">${product.price} MAD</span>
         <p>${product.desc[currentLang]}</p>
-        <a class="btn primary" href="${categoryPageLinks[product.category]}" data-product-link="${product.id}">${t("add")}</a>
+        <button class="btn primary" type="button" data-add="${product.id}" data-size="${product.category === "accessories" ? "42" : "M"}">${t("add")}</button>
       </div>
     </article>
   `).join("");
@@ -355,19 +403,65 @@ function closeCart() {
   else document.querySelector(".cart-toggle").focus();
 }
 
+function addProductToCart(id, size) {
+  const product = products.find((item) => String(item.id) === String(id));
+  if (!product) return false;
+  const selectedSize = size || (product.category === "accessories" ? "42" : "M");
+  const existing = cart.find((item) => String(item.id) === String(id) && item.size === selectedSize);
+  if (existing) existing.qty += 1;
+  else cart.push({ id, size: selectedSize, qty: 1 });
+  renderCart();
+  return true;
+}
+
+function openAddCartChoice() {
+  if (addCartModal?.showModal) addCartModal.showModal();
+  else addCartModal?.setAttribute("open", "");
+}
+
+function closeAddCartChoice() {
+  if (addCartModal?.open) addCartModal.close();
+}
+
+function openMobileMenu() {
+  if (!mobileMenu) return;
+  mobileMenu.inert = false;
+  mobileMenu.classList.add("open");
+  mobileMenu.setAttribute("aria-hidden", "false");
+  mobileMenuBackdrop.classList.add("show");
+  menuToggle.setAttribute("aria-expanded", "true");
+  document.getElementById("closeMobileMenu")?.focus();
+}
+
+function closeMobileMenu() {
+  if (!mobileMenu) return;
+  mobileMenu.classList.remove("open");
+  mobileMenu.setAttribute("aria-hidden", "true");
+  mobileMenu.inert = true;
+  mobileMenuBackdrop.classList.remove("show");
+  menuToggle.setAttribute("aria-expanded", "false");
+}
+
+function updateWhatsAppSupportLink() {
+  if (!whatsappSupport) return;
+  let number = window.ALWATIN_SUPABASE?.whatsapp || "";
+  try {
+    const adminState = JSON.parse(localStorage.getItem("alwatin-admin-state") || "null");
+    number = number || adminState?.settings?.whatsapp || "";
+  } catch {}
+  const digits = String(number).replace(/\D/g, "");
+  const normalized = digits.startsWith("0") ? `212${digits.slice(1)}` : digits;
+  whatsappSupport.href = normalized ? `https://wa.me/${normalized}?text=${encodeURIComponent(t("whatsappMessage"))}` : "#footer-contact";
+}
+
 document.addEventListener("click", (event) => {
   const addButton = event.target.closest("[data-add]");
   if (addButton) {
-    successMessage.classList.remove("show");
     const id = addButton.dataset.add;
     const product = products.find((item) => String(item.id) === String(id));
-    if (!product) return;
-    const size = addButton.dataset.size || (product.category === "accessories" ? "42" : "M");
-    const existing = cart.find((item) => String(item.id) === String(id) && item.size === size);
-    if (existing) existing.qty += 1;
-    else cart.push({ id, size, qty: 1 });
-    renderCart();
-    openCart();
+    if (!product || !addProductToCart(id, addButton.dataset.size)) return;
+    if (addButton.closest(".product-card")) openAddCartChoice();
+    else openCart();
   }
 
   const removeButton = event.target.closest("[data-remove]");
@@ -397,6 +491,13 @@ document.querySelector(".cart-toggle").addEventListener("click", openCart);
 document.getElementById("closeCart").addEventListener("click", closeCart);
 overlay.addEventListener("click", closeCart);
 languageSelect.addEventListener("change", (event) => applyLanguage(event.target.value));
+mobileLanguageSelect?.addEventListener("change", (event) => { applyLanguage(event.target.value); closeMobileMenu(); });
+menuToggle?.addEventListener("click", openMobileMenu);
+document.getElementById("closeMobileMenu")?.addEventListener("click", closeMobileMenu);
+mobileMenuBackdrop?.addEventListener("click", closeMobileMenu);
+document.querySelectorAll(".mobile-nav a").forEach((link) => link.addEventListener("click", closeMobileMenu));
+document.getElementById("checkoutNowButton")?.addEventListener("click", () => { closeAddCartChoice(); openCart(); document.querySelector('#checkoutForm input[name="name"]')?.focus(); });
+document.getElementById("closeSuccessModal")?.addEventListener("click", () => successModal?.close());
 
 document.getElementById("checkoutForm").addEventListener("submit", async (event) => {
   event.preventDefault();
@@ -429,7 +530,8 @@ document.getElementById("checkoutForm").addEventListener("submit", async (event)
       console.warn("Supabase order sync failed; local order retained.", error);
     }
   }
-  successMessage.classList.add("show");
+  if (successModal?.showModal) successModal.showModal();
+  else successModal?.setAttribute("open", "");
   cart = [];
   renderCart();
   event.target.reset();
@@ -446,3 +548,17 @@ document.addEventListener("keydown", (event) => {
     else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
   }
 });
+
+async function loadStoreSettings() {
+  if (!window.AlwatinDB) return;
+  try {
+    const rows = await AlwatinDB.select("store_settings", "?select=whatsapp&id=eq.true&limit=1");
+    if (rows[0]?.whatsapp) {
+      window.ALWATIN_SUPABASE.whatsapp = rows[0].whatsapp;
+      updateWhatsAppSupportLink();
+    }
+  } catch { /* Keep the fallback contact link when settings are unavailable. */ }
+}
+
+updateWhatsAppSupportLink();
+loadStoreSettings();

@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>الوَتِين | Alwatin — Moroccan Traditional Wear</title>
+    <title>الوَتِين | ملابس مغربية تقليدية رجالية</title>
     <meta name="theme-color" content="#555e43" />
-    <meta name="description" content="A multilingual Moroccan traditional clothing store with men’s caftans, djellabas, jabador, gandoura, kandrissi trousers, blog guides, and Cash on Delivery checkout." />
+    <meta name="description" content="متجر الوَتِين للملابس المغربية التقليدية الرجالية: جلابة وجبادور وقندورة وقفطان وسروال قندريسي، مع التوصيل داخل المغرب والدفع عند الاستلام." />
     <link rel="canonical" href="https://www.watin.shop/" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="الوَتِين | لباس مغربي تقليدي رجالي" />
@@ -39,15 +39,28 @@
           <span class="cart-label" data-i18n="cart">السلة</span>
           <b id="cartCount">0</b>
         </button>
+        <button class="menu-toggle" id="menuToggle" type="button" data-i18n-label="menuOpen" aria-label="فتح القائمة" aria-controls="mobileMenu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
       </div>
+      <aside class="mobile-menu" id="mobileMenu" aria-label="القائمة الرئيسية" aria-hidden="true" inert>
+        <div class="mobile-menu-header"><strong data-i18n="menuTitle">القائمة الرئيسية</strong><button class="icon-button" id="closeMobileMenu" type="button" data-i18n-label="close" aria-label="إغلاق">×</button></div>
+        <nav class="mobile-nav">
+          <a href="#shop" data-i18n="navShop">المتجر</a>
+          <a href="#blog" data-i18n="navBlog">المدونة</a>
+          <a href="#cod" data-i18n="navCod">الدفع عند الاستلام</a>
+        </nav>
+        <label class="mobile-language"><span data-i18n="languageLabel">اختيار اللغة</span><select id="mobileLanguageSelect" aria-label="اختيار اللغة"><option value="ar">العربية</option><option value="fr">Français</option><option value="en">English</option></select></label>
+      </aside>
+      <div class="mobile-menu-backdrop" id="mobileMenuBackdrop"></div>
     </header>
 
     <main id="home">
       <section class="hero">
         <div class="hero-copy">
           <p class="eyebrow" data-i18n="eyebrow">لباس مغربي أصيل</p>
-          <h1 data-i18n="heroTitle">أناقة مغربية، حتى لباب دارك.</h1>
-          <p data-i18n="heroText">اكتشف الجلابة، الجبادور، القندورة والقفطان. اختيارات تقليدية وعصرية للعيد، الأعراس وكل مناسباتك.</p>
+          <h1 data-i18n="heroTitle">أناقة مغربية تصل إلى باب منزلك.</h1>
+          <p data-i18n="heroText">اكتشف الجلابة والجبادور والقندورة والقفطان. أزياء تقليدية وعصرية للعيد والأعراس وجميع مناسباتك.</p>
           <div class="hero-actions">
             <a class="btn primary" href="#shop" data-i18n="shopNow">اكتشف المجموعة</a>
             <a class="btn ghost" href="#blog" data-i18n="readGuides">اقرأ الدلائل</a>
@@ -60,9 +73,9 @@
       </section>
 
       <section class="trust-strip" id="cod">
-        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 5h12v13H2zM14 10h4l4 4v4h-8"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></svg><div><strong data-i18n="codTitle">الدفع عند الاستلام</strong><span data-i18n="codText">اطلب الآن، وخلّص عند التوصيل.</span></div></div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 5h12v13H2zM14 10h4l4 4v4h-8"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></svg><div><strong data-i18n="codTitle">الدفع عند الاستلام</strong><span data-i18n="codText">اطلب الآن، وادفع عند التوصيل.</span></div></div>
         <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><div><strong data-i18n="deliveryTitle">توصيل داخل المغرب</strong><span data-i18n="deliveryText">التوصيل داخل المغرب.</span></div></div>
-        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M10 5a2 2 0 1 1 2 2v3L2 18v2h20v-2L12 10"/></svg><div><strong data-i18n="sizesTitle">مقاسات واضحة</strong><span data-i18n="sizesText">اختار المقاس المناسب ليك.</span></div></div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M10 5a2 2 0 1 1 2 2v3L2 18v2h20v-2L12 10"/></svg><div><strong data-i18n="sizesTitle">مقاسات واضحة</strong><span data-i18n="sizesText">اختر المقاس المناسب لك.</span></div></div>
       </section>
 
       <section class="section" id="shop">
@@ -77,12 +90,12 @@
         <div>
           <p class="eyebrow" data-i18n="seoEyebrow">دليلك للأناقة المغربية</p>
           <h2 data-i18n="seoTitle">من أول إلهام، للاختيار المناسب.</h2>
-          <p data-i18n="seoText">تعرّف على الأثواب والموديلات، اكتشف المجموعة اللي كتناسبك، وكمل طلبك بالدفع عند الاستلام.</p>
+          <p data-i18n="seoText">تعرّف على الأقمشة والتصاميم، واكتشف المجموعة التي تناسبك، ثم أكمل طلبك بالدفع عند الاستلام.</p>
         </div>
         <div class="seo-map">
           <span data-i18n="mapOne">استلهم من دلائل اللباس المغربي</span>
-          <span data-i18n="mapTwo">اكتشف المجموعة المناسبة ليك</span>
-          <span data-i18n="mapThree">اختار طلبك وخلّص عند الاستلام</span>
+          <span data-i18n="mapTwo">اكتشف المجموعة المناسبة لك</span>
+          <span data-i18n="mapThree">اختر طلبك وادفع عند الاستلام</span>
         </div>
       </section>
 
@@ -126,7 +139,7 @@
         </div>
         <div class="footer-column footer-note">
           <h3 data-i18n="footerCodTitle">الدفع عند الاستلام</h3>
-          <p data-i18n="footerCodText">طلبك كيوصلك حتى لباب دارك، وكتخلص عند الاستلام.</p>
+        <p data-i18n="footerCodText">يصل طلبك إلى باب منزلك، وتدفع عند الاستلام.</p>
           <span class="payment-badge">COD · MAD</span>
         </div>
       </div>
@@ -159,11 +172,28 @@
           <span data-i18n="cityLabel">المدينة والعنوان</span>
           <textarea required name="address" rows="3"></textarea>
         </label>
-        <p class="cod-note" data-i18n="checkoutNote">الدفع عند الاستلام. غادي نتاصلوا بك لتأكيد الطلب والتوصيل.</p>
-        <button class="btn primary full" type="submit" data-i18n="placeOrder">تجربة الطلب</button>
+        <p class="cod-note" data-i18n="checkoutNote">الدفع عند الاستلام. سيتواصل معك فريقنا لتأكيد الطلب والتوصيل.</p>
+        <button class="btn primary full" type="submit" data-i18n="placeOrder">تأكيد الطلب</button>
       </form>
-      <p class="success-message" id="successMessage" role="status" data-i18n="successMessage">تسجل الطلب بنجاح. غادي نتاصلوا بك للتأكيد.</p>
+      <p class="success-message" id="successMessage" role="status" data-i18n="successMessage">تم تسجيل الطلب بنجاح. سنتواصل معك لتأكيده.</p>
     </aside>
+    <dialog class="choice-dialog" id="addCartModal" aria-labelledby="addCartTitle">
+      <form method="dialog">
+        <button class="modal-close" type="submit" value="cancel" data-i18n-label="close" aria-label="إغلاق">×</button>
+        <p class="modal-kicker" data-i18n="modalKicker">اختيارك</p>
+        <h2 id="addCartTitle" data-i18n="addCartQuestion">هل ترغب في مواصلة التسوق وإضافة منتجات أخرى؟</h2>
+        <p class="modal-copy" data-i18n="addCartCopy">تمت إضافة المنتج إلى سلتك.</p>
+        <div class="modal-actions"><button class="btn ghost" id="continueShoppingButton" type="submit" value="continue" data-i18n="continueShopping">مواصلة التسوق</button><button class="btn primary" id="checkoutNowButton" type="button" data-i18n="checkoutNow">إتمام الطلب الآن</button></div>
+      </form>
+    </dialog>
+    <dialog class="success-dialog" id="successModal" aria-labelledby="successTitle">
+      <div>
+        <span class="success-mark" aria-hidden="true">✓</span>
+        <h2 id="successTitle" data-i18n="successTitle">شكراً لك على ثقتك بنا وشراء منتجاتنا!</h2>
+        <p data-i18n="successCopy">تم استلام طلبك بنجاح، وسيقوم فريقنا بالتواصل معك قريباً لتأكيد الطلب.</p>
+        <div class="modal-actions"><a class="btn primary whatsapp-button" id="whatsappSupport" href="#footer-contact" target="_blank" rel="noopener noreferrer" data-i18n="whatsappSupport">للتواصل معنا عبر الواتساب لمزيد من التفاصيل</a><button class="btn ghost" id="closeSuccessModal" type="button" data-i18n="close">إغلاق</button></div>
+      </div>
+    </dialog>
     <div class="overlay" id="overlay"></div>
 
     <script src="./supabase-config.js"></script>
