@@ -269,6 +269,8 @@ let cart = [];
 const languageSelect = document.getElementById("languageSelect");
 const productGrid = document.getElementById("productGrid");
 const categoryFilters = document.getElementById("categoryFilters");
+const categoryPrev = document.getElementById("categoryPrev");
+const categoryNext = document.getElementById("categoryNext");
 const blogGrid = document.getElementById("blogGrid");
 const cartPanel = document.getElementById("cartPanel");
 const overlay = document.getElementById("overlay");
@@ -318,6 +320,23 @@ function renderFilters() {
   document.querySelectorAll('[data-category="all"]').forEach((node) => {
     if (node.tagName === "BUTTON") node.setAttribute("aria-pressed", String(activeCategory === "all"));
   });
+  requestAnimationFrame(updateCategoryCarousel);
+}
+
+function updateCategoryCarousel() {
+  if (!categoryFilters || !categoryPrev || !categoryNext) return;
+  const maxScroll = Math.max(0, categoryFilters.scrollWidth - categoryFilters.clientWidth);
+  const direction = getComputedStyle(categoryFilters).direction;
+  const position = direction === "rtl" ? Math.abs(categoryFilters.scrollLeft) : categoryFilters.scrollLeft;
+  categoryPrev.disabled = maxScroll <= 2 || position <= 2;
+  categoryNext.disabled = maxScroll <= 2 || position >= maxScroll - 2;
+}
+
+function scrollCategoryCarousel(step) {
+  if (!categoryFilters) return;
+  const distance = Math.max(categoryFilters.clientWidth * .92, 220);
+  const direction = getComputedStyle(categoryFilters).direction === "rtl" ? -1 : 1;
+  categoryFilters.scrollBy({ left: step * distance * direction, behavior: "smooth" });
 }
 
 function renderProducts() {
@@ -498,6 +517,10 @@ menuToggle?.addEventListener("click", openMobileMenu);
 document.getElementById("closeMobileMenu")?.addEventListener("click", closeMobileMenu);
 mobileMenuBackdrop?.addEventListener("click", closeMobileMenu);
 document.querySelectorAll(".mobile-nav a").forEach((link) => link.addEventListener("click", closeMobileMenu));
+categoryPrev?.addEventListener("click", () => scrollCategoryCarousel(-1));
+categoryNext?.addEventListener("click", () => scrollCategoryCarousel(1));
+categoryFilters?.addEventListener("scroll", updateCategoryCarousel, { passive: true });
+window.addEventListener("resize", updateCategoryCarousel);
 document.getElementById("checkoutNowButton")?.addEventListener("click", () => { closeAddCartChoice(); openCart(); document.querySelector('#checkoutForm input[name="name"]')?.focus(); });
 document.getElementById("closeSuccessModal")?.addEventListener("click", () => successModal?.close());
 

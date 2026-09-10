@@ -80,7 +80,11 @@
 
       <section class="section" id="shop">
         <div class="section-heading category-heading"><h2 data-i18n="shopEyebrow">تصنيفات المتجر</h2><a class="text-link" href="#productGrid" data-category="all"><span data-i18n="viewAll">عرض الكل</span><span class="direction-arrow" aria-hidden="true">→</span></a></div>
-        <div class="filters" id="categoryFilters" aria-label="Product categories"></div>
+        <div class="category-carousel" aria-label="تصنيفات المنتجات">
+          <button class="category-carousel-arrow category-carousel-arrow-prev" id="categoryPrev" type="button" aria-label="التصنيفات السابقة">›</button>
+          <div class="filters category-track" id="categoryFilters" aria-label="Product categories"></div>
+          <button class="category-carousel-arrow category-carousel-arrow-next" id="categoryNext" type="button" aria-label="التصنيفات التالية">‹</button>
+        </div>
         <div class="section-heading products-heading"><div><h2 data-i18n="shopTitle">مختارات المتجر</h2><p data-i18n="shopText">لباس مغربي لكل مناسبة.</p></div><button type="button" class="text-link" data-category="all"><span data-i18n="viewAll">عرض الكل</span><span class="direction-arrow" aria-hidden="true">→</span></button></div>
         <div class="product-grid" id="productGrid"></div>
         <p class="image-note" data-i18n="demoImages">صور توضيحية للمجموعة</p>

@@ -281,6 +281,39 @@ body.cart-open { overflow: hidden; }
   .filter-chip span { font-size: .8125rem; }
 }
 
+/* Premium responsive category carousel: four cards per desktop view and touch scrolling on mobile. */
+.category-carousel { position: relative; display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 14px; }
+.category-track { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: calc((100% - 48px) / 4); grid-template-rows: 1fr; gap: 16px; overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory; scroll-behavior: smooth; scrollbar-width: none; padding: 6px 4px 12px; margin: 0; }
+.category-track::-webkit-scrollbar { display: none; }
+.category-track .filter-chip { position: relative; isolation: isolate; display: block; width: 100%; aspect-ratio: 3 / 4; overflow: hidden; scroll-snap-align: start; padding: 0; border: 1px solid rgba(177, 150, 98, .55); border-radius: 16px; background: #e6dfd2; color: #fff; box-shadow: 0 8px 22px rgba(48, 42, 25, .08); }
+.category-track .filter-chip img { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; border-radius: inherit; object-fit: cover; object-position: 50% 22%; transform: scale(1); transition: transform .3s ease; }
+.category-track .filter-chip::after { content: ''; position: absolute; inset: 0; z-index: -1; display: block; background: linear-gradient(to top, rgba(0, 0, 0, .7), rgba(0, 0, 0, .2) 42%, transparent 76%); pointer-events: none; }
+.category-track .filter-chip span { position: absolute; inset-inline: 14px; bottom: 14px; z-index: 1; display: block; width: auto; min-height: 0; color: #fff; font-family: Tahoma, 'Segoe UI', Arial, sans-serif; font-size: clamp(.875rem, 1.3vw, 1.05rem); font-weight: 700; line-height: 1.5; text-align: center; text-shadow: 0 1px 8px rgba(0, 0, 0, .35); white-space: normal; }
+.category-track .filter-chip:hover img { transform: scale(1.05); }
+.category-track .filter-chip.active { outline: 3px solid var(--emerald); outline-offset: 3px; }
+.category-track .filter-chip.active span { color: #fff; font-weight: 700; }
+.category-carousel-arrow { position: relative; z-index: 2; display: grid; place-items: center; width: 44px; height: 44px; flex: 0 0 44px; border: 1px solid rgba(177, 150, 98, .5); border-radius: 50%; background: var(--surface); color: var(--emerald-dark); box-shadow: 0 8px 22px rgba(48, 42, 25, .1); font-size: 1.65rem; line-height: 1; transition: transform .3s ease, background .3s ease, color .3s ease, box-shadow .3s ease; }
+.category-carousel-arrow:hover { transform: scale(1.1); background: var(--gold); color: #fff; box-shadow: 0 12px 28px rgba(120, 94, 45, .24); }
+.category-carousel-arrow:active { transform: scale(.96); }
+.category-carousel-arrow:disabled { cursor: default; opacity: .35; box-shadow: none; }
+@media (max-width: 1000px) {
+  .category-track { grid-auto-columns: calc((100% - 32px) / 3); }
+}
+@media (max-width: 700px) {
+  .category-carousel { display: block; }
+  .category-track { grid-auto-columns: calc((100% - 12px) / 2); gap: 12px; padding: 5px 2px 12px; overscroll-behavior-inline: contain; -webkit-overflow-scrolling: touch; }
+  .category-carousel-arrow { position: absolute; top: 50%; width: 40px; height: 40px; transform: translateY(-50%); }
+  .category-carousel-arrow:hover { transform: translateY(-50%) scale(1.1); }
+  .category-carousel-arrow:active { transform: translateY(-50%) scale(.96); }
+  .category-carousel-arrow-prev { inset-inline-start: -8px; }
+  .category-carousel-arrow-next { inset-inline-end: -8px; }
+  .category-track .filter-chip span { inset-inline: 10px; bottom: 10px; font-size: .875rem; }
+}
+@media (max-width: 360px) {
+  .category-track { grid-auto-columns: calc((100% - 10px) / 2); gap: 10px; }
+  .category-track .filter-chip span { font-size: .8125rem; }
+}
+
 /* Use the original reference artwork, clipped to its exact logo bounds. */
 .brand-logo { display: block; width: 178px; height: auto; overflow: hidden; }
 .brand small { margin-top: 2px; }
