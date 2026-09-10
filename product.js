@@ -257,7 +257,7 @@ async function loadRemoteCatalog() {
     products = rows.map(row => ({ id: row.id, category: row.category, price: Number(row.price), comparePrice: Number(row.compare_price || 0), stock: Number(row.stock || 0), sku: row.sku, image: row.image_url, sizes: row.sizes || [], colors: row.colors || [], pleats: row.pleats || '', active: row.active, featured: row.featured, label: { ar: row.name_ar, fr: row.name_fr, en: row.name_en }, name: { ar: row.name_ar, fr: row.name_fr, en: row.name_en }, desc: { ar: row.description_ar || '', fr: row.description_fr || '', en: row.description_en || '' }, seoTitle: row.seo_title, seoDescription: row.seo_description }));
     fallbackProducts.forEach(fallback => { if (!products.some(product => product.category === fallback.category)) products.push(fallback); });
     applyLanguage(currentLang);
-    if (currentProductId !== null) renderProductPage();
+    if (currentProductId !== null) syncProductRoute();
   } catch { /* Keep the built-in catalog until Supabase tables are ready. */ }
 }
 
