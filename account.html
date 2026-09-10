@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>حسابي | الوَتِين</title>
+    <meta name="robots" content="noindex,follow" />
+    <meta name="theme-color" content="#344029" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="account-page-body">
+    <header class="account-page-header">
+      <a href="./" class="brand" aria-label="العودة إلى المتجر"><img class="brand-logo" src="./assets/alwatin-logo.png" width="279" height="182" alt="شعار الوَتِين" /></a>
+      <a class="btn ghost" href="./">العودة إلى المتجر</a>
+    </header>
+    <main class="account-page">
+      <section class="account-loading" id="accountLoading"><span class="loader" aria-hidden="true"></span><p>جارٍ تحميل حسابك...</p></section>
+      <section class="account-guest" id="accountGuest" hidden>
+        <p class="eyebrow">حساب العميل</p>
+        <h1>سجّل الدخول إلى حسابك</h1>
+        <p>يمكنك مراجعة طلباتك وحفظ عناوينك وتحديث معلوماتك بعد تسجيل الدخول.</p>
+        <form id="accountLoginForm" class="account-card compact-form">
+          <label><span>البريد الإلكتروني</span><input name="email" type="email" required autocomplete="email" /></label>
+          <label><span>كلمة المرور</span><input name="password" type="password" required minlength="8" autocomplete="current-password" /></label>
+          <p class="account-message" id="accountLoginMessage" role="status"></p>
+          <button class="btn primary" type="submit">تسجيل الدخول</button>
+        </form>
+      </section>
+      <section id="accountDashboard" hidden>
+        <div class="account-welcome">
+          <div><p class="eyebrow">حسابي</p><h1>مرحباً بك في الوَتِين</h1><p id="accountEmail"></p></div>
+          <button class="btn ghost" id="accountLogout" type="button">تسجيل الخروج</button>
+        </div>
+        <div class="account-grid">
+          <section class="account-card">
+            <div class="account-card-heading"><div><span>01</span><h2>المعلومات الشخصية</h2></div></div>
+            <form id="profileForm" class="account-form">
+              <label><span>الاسم الكامل</span><input name="fullName" required minlength="3" autocomplete="name" /></label>
+              <label><span>رقم الهاتف</span><input name="phone" type="tel" autocomplete="tel" /></label>
+              <p class="account-message" id="profileMessage" role="status"></p>
+              <button class="btn primary" type="submit">حفظ المعلومات</button>
+            </form>
+          </section>
+          <section class="account-card">
+            <div class="account-card-heading"><div><span>02</span><h2>عناوين التوصيل</h2></div></div>
+            <div class="address-list" id="addressList"></div>
+            <form id="addressForm" class="account-form">
+              <input name="id" type="hidden" />
+              <label><span>اسم العنوان</span><input name="label" value="العنوان الرئيسي" required /></label>
+              <div class="form-row"><label><span>المدينة</span><input name="city" required /></label><label><span>رقم الهاتف</span><input name="phone" type="tel" required /></label></div>
+              <label><span>العنوان الكامل</span><textarea name="address" rows="3" required></textarea></label>
+              <label class="check-label"><input name="isDefault" type="checkbox" /><span>اعتماد هذا العنوان عنواناً افتراضياً</span></label>
+              <p class="account-message" id="addressMessage" role="status"></p>
+              <button class="btn primary" type="submit">حفظ العنوان</button>
+            </form>
+          </section>
+          <section class="account-card account-orders-card">
+            <div class="account-card-heading"><div><span>03</span><h2>طلباتي</h2></div></div>
+            <div class="orders-list" id="ordersList"><p>لم تسجّل أي طلبات بعد.</p></div>
+          </section>
+          <section class="account-card">
+            <div class="account-card-heading"><div><span>04</span><h2>تغيير كلمة المرور</h2></div></div>
+            <form id="passwordForm" class="account-form">
+              <label><span>كلمة المرور الجديدة</span><input name="password" type="password" minlength="8" required autocomplete="new-password" /></label>
+              <label><span>تأكيد كلمة المرور</span><input name="confirmation" type="password" minlength="8" required autocomplete="new-password" /></label>
+              <p class="account-message" id="passwordMessage" role="status"></p>
+              <button class="btn primary" type="submit">تحديث كلمة المرور</button>
+            </form>
+          </section>
+        </div>
+      </section>
+      <section class="account-reset account-card" id="passwordReset" hidden>
+        <p class="eyebrow">استرجاع الحساب</p><h1>عيّن كلمة مرور جديدة</h1>
+        <form id="resetForm" class="account-form">
+          <label><span>كلمة المرور الجديدة</span><input name="password" type="password" minlength="8" required /></label>
+          <label><span>تأكيد كلمة المرور</span><input name="confirmation" type="password" minlength="8" required /></label>
+          <p class="account-message" id="resetMessage" role="status"></p>
+          <button class="btn primary" type="submit">حفظ كلمة المرور</button>
+        </form>
+      </section>
+    </main>
+    <script src="./supabase-config.js"></script>
+    <script src="./supabase.js"></script>
+    <script src="./account.js"></script>
+  </body>
+</html>

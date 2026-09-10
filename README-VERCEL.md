@@ -18,8 +18,17 @@
 - `sitemap.xml`
 - Supabase Authentication → URL Configuration
 
-أضف رابط لوحة التحكم الجديد إلى Redirect URLs:
+في Supabase افتح `Authentication → URL Configuration`، ثم عيّن:
+
+- Site URL: `https://www.watin.shop`
+- Redirect URLs:
 
 `https://www.watin.shop/admin.html`
+
+`https://www.watin.shop/account.html`
+
+`https://www.watin.shop/account.html?mode=reset`
+
+بعد تحديث المشروع، شغّل ملف `supabase-schema.sql` كاملاً داخل SQL Editor لإضافة حسابات العملاء والعناوين والطلبات الآمنة.
 
 لا تضع Service Role Key داخل ملفات الموقع. المفتاح الموجود في `supabase-config.js` هو Publishable Key.

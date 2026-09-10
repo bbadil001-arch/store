@@ -7,20 +7,43 @@ const translations = {
     navCod: "الدفع عند الاستلام",
     cart: "السلة",
     eyebrow: "لباس مغربي أصيل",
-    heroTitle: "أناقة مغربية تصل إلى باب منزلك.",
-    heroText: "اكتشف الجلابة والجبادور والقندورة والقفطان. أزياء تقليدية وعصرية للعيد والأعراس وجميع مناسباتك.",
+    heroTitle: "أناقة مغربية\nتصل إلى باب منزلك",
+    heroText: "ملابس تقليدية للرجال تجمع بين الأصالة والجودة.",
     shopNow: "اكتشف المجموعة",
+    shopNowShort: "تسوق الآن",
     readGuides: "اقرأ الدلائل",
     codTitle: "الدفع عند الاستلام",
     codText: "اطلب الآن، وادفع عند التوصيل.",
     deliveryTitle: "توصيل داخل المغرب",
     deliveryText: "التوصيل داخل المغرب.",
     qualityPromo: "جودة مغربية أصيلة",
+    shippingPromo: "توصيل مجاني للطلبات فوق 499 درهم",
+    shippingPromo500: "توصيل مجاني لجميع أنحاء المغرب ابتداءً من 500 درهم",
     deliveryPromo: "توصيل لجميع مدن المغرب",
     qualityTitle: "جودة مضمونة",
     fastDeliveryTitle: "توصيل سريع",
     supportTitle: "خدمة العملاء 7/7",
     search: "البحث عن المنتجات",
+    searchPlaceholder: "ابحث عن منتج ...",
+    wishlist: "المفضلة",
+    home: "الرئيسية",
+    categories: "التصنيفات",
+    codSafe: "مضمون 100%",
+    easyReturns: "إرجاع سهل",
+    returnsPromo: "خلال 7 أيام",
+    supportPromo: "مساعدة دائمة",
+    customerService: "خدمة العملاء",
+    trackOrder: "تتبع الطلب",
+    deliveryAllMorocco: "لجميع أنحاء المغرب",
+    authenticProducts: "منتجات أصلية",
+    continuousSupport: "مرافقة دائمة",
+    availableNow: "متاح حالياً",
+    catDjellaba: "جلابة",
+    catJabador: "جابدور",
+    catCaftan: "قفطان",
+    catAccessories: "إكسسوارات",
+    specialOffers: "عروض خاصة",
+    searchButton: "بحث",
     account: "حسابي",
     accountKicker: "حساب الزبون",
     accountTitle: "أنشئ حسابك بسهولة",
@@ -33,14 +56,20 @@ const translations = {
     sizesTitle: "مقاسات واضحة",
     sizesText: "اختر المقاس المناسب لك.",
     shopEyebrow: "تصنيفات المتجر",
-    shopTitle: "مختارات المتجر",
-    shopText: "لباس مغربي لكل مناسبة.",
+    categoryTitle: "تسوق حسب الفئة",
+    categorySubtitle: "اكتشف مجموعاتنا المختارة بعناية",
+    shopTitle: "منتجات مختارة لك",
+    shopText: "الأكثر طلباً لدى عملائنا",
+    craftTitleOne: "صناعة مغربية أصيلة",
+    craftTextOne: "جودة في كل تفصيلة",
+    craftTitleTwo: "مواد مختارة بعناية",
+    craftTextTwo: "لراحة وأناقة تدوم",
     seoEyebrow: "دليلك للأناقة المغربية",
     seoTitle: "من أول إلهام، للاختيار المناسب.",
     seoText: "تعرّف على الأقمشة والتصاميم، واكتشف المجموعة التي تناسبك، ثم أكمل طلبك بالدفع عند الاستلام.",
-    mapOne: "استلهم من أدلة الأزياء المغربية",
+    mapOne: "استلهم من الأناقة المغربية",
     mapTwo: "اكتشف المجموعة المناسبة لك",
-    mapThree: "اختر طلبك وادفع عند الاستلام",
+    mapThree: "اختر مقاسك وأضف إلى السلة",
     blogEyebrow: "المدونة",
     blogTitle: "دلائل ونصائح من المدونة",
     blogText: "كل ما تحتاجه لاختيار وتنسيق أزيائك المغربية.",
@@ -62,10 +91,11 @@ const translations = {
     viewAll: "عرض الكل",
     backTop: "العودة للأعلى",
     footerTagline: "أناقة تتوارثها الأجيال.",
+    footerBrandCopy: "ملابس مغربية رجالية تجمع بين أصالة الحرفة وأناقة التفاصيل.",
     footerQuickLinks: "روابط سريعة",
     footerAbout: "من نحن",
     footerContact: "اتصل بنا",
-    footerService: "خدمة الزبناء",
+    footerService: "خدمة العملاء",
     footerShipping: "الشحن والتوصيل",
     footerReturns: "سياسة الاستبدال والاسترجاع",
     footerTerms: "الشروط والأحكام",
@@ -89,7 +119,35 @@ const translations = {
     remove: "حذف",
     codBadge: "عند الاستلام",
     demoImages: "صور توضيحية للمجموعة",
-    paymentComingSoon: "قريباً"
+    paymentComingSoon: "قريباً",
+    paymentMethod: "طريقة الدفع",
+    loginTitle: "مرحباً بعودتك",
+    login: "تسجيل الدخول",
+    register: "إنشاء حساب",
+    passwordLabel: "كلمة المرور",
+    confirmPasswordLabel: "تأكيد كلمة المرور",
+    fullNameLabel: "الاسم الكامل",
+    forgotPassword: "نسيت كلمة المرور؟",
+    createAccount: "إنشاء الحساب",
+    backToLogin: "العودة إلى تسجيل الدخول",
+    forgotCopy: "أدخل بريدك الإلكتروني وسنرسل إليك رابطاً آمناً لتعيين كلمة مرور جديدة.",
+    sendResetLink: "إرسال رابط الاسترجاع",
+    signedInTitle: "أنت مسجل الدخول",
+    openAccount: "فتح حسابي",
+    logout: "تسجيل الخروج",
+    loginSuccess: "تم تسجيل الدخول بنجاح.",
+    registrationSuccess: "تم إنشاء الحساب. تحقق من بريدك الإلكتروني لتأكيده، ثم سجل الدخول.",
+    resetSent: "تم إرسال رابط استرجاع كلمة المرور إلى بريدك الإلكتروني.",
+    invalidCredentials: "البريد الإلكتروني أو كلمة المرور غير صحيحة.",
+    emailExists: "يوجد حساب مسجل بهذا البريد الإلكتروني.",
+    passwordMismatch: "كلمتا المرور غير متطابقتين.",
+    weakPassword: "يجب أن تتكون كلمة المرور من 8 أحرف على الأقل.",
+    authNetworkError: "تعذر الاتصال بخدمة الحساب. تحقق من اتصالك وحاول مجدداً.",
+    noFavourites: "لم تضف أي منتج إلى المفضلة بعد.",
+    emptyResults: "لم نعثر على منتجات مطابقة لبحثك.",
+    bestSeller: "الأكثر مبيعاً",
+    favourite: "حفظ في المفضلة",
+    unfavourite: "إزالة من المفضلة"
   },
   fr: {
     brand: "الوَتِين",
@@ -99,20 +157,43 @@ const translations = {
     navCod: "Paiement à la livraison",
     cart: "Panier",
     eyebrow: "Mode marocaine authentique",
-    heroTitle: "L’élégance marocaine, à votre porte.",
-    heroText: "Découvrez djellabas, jabadors, gandouras et caftans. Des tenues traditionnelles et modernes pour l’Aïd, les mariages et toutes vos occasions.",
+    heroTitle: "L’élégance marocaine,\nlivrée chez vous",
+    heroText: "Des vêtements traditionnels pour homme, entre authenticité et qualité.",
     shopNow: "Voir la collection",
+    shopNowShort: "Acheter maintenant",
     readGuides: "Lire les guides",
     codTitle: "Paiement à la livraison",
     codText: "Commandez, payez à réception.",
     deliveryTitle: "Livraison au Maroc",
     deliveryText: "Livraison au Maroc.",
     qualityPromo: "Qualité marocaine authentique",
+    shippingPromo: "Livraison gratuite dès 499 MAD",
+    shippingPromo500: "Livraison gratuite partout au Maroc dès 500 MAD",
     deliveryPromo: "Livraison dans toutes les villes du Maroc",
     qualityTitle: "Qualité garantie",
     fastDeliveryTitle: "Livraison rapide",
     supportTitle: "Service client 7/7",
     search: "Rechercher des produits",
+    searchPlaceholder: "Rechercher un produit ...",
+    wishlist: "Favoris",
+    home: "Accueil",
+    categories: "Catégories",
+    codSafe: "100 % sécurisé",
+    easyReturns: "Retour facile",
+    returnsPromo: "Sous 7 jours",
+    supportPromo: "Assistance permanente",
+    customerService: "Service client",
+    trackOrder: "Suivre la commande",
+    deliveryAllMorocco: "Partout au Maroc",
+    authenticProducts: "Produits authentiques",
+    continuousSupport: "Accompagnement continu",
+    availableNow: "Disponible maintenant",
+    catDjellaba: "Djellaba",
+    catJabador: "Jabador",
+    catCaftan: "Caftan",
+    catAccessories: "Accessoires",
+    specialOffers: "Offres spéciales",
+    searchButton: "Rechercher",
     account: "Mon compte",
     accountKicker: "Compte client",
     accountTitle: "Créez votre compte facilement",
@@ -125,8 +206,14 @@ const translations = {
     sizesTitle: "Tailles claires",
     sizesText: "Trouvez votre taille.",
     shopEyebrow: "Catégories",
-    shopTitle: "Notre sélection",
-    shopText: "Une tenue marocaine pour chaque occasion.",
+    categoryTitle: "Acheter par catégorie",
+    categorySubtitle: "Découvrez nos collections soigneusement sélectionnées",
+    shopTitle: "Sélectionnés pour vous",
+    shopText: "Les plus demandés par nos clients",
+    craftTitleOne: "Artisanat marocain authentique",
+    craftTextOne: "La qualité dans chaque détail",
+    craftTitleTwo: "Matières soigneusement choisies",
+    craftTextTwo: "Pour un confort et une élégance durables",
     seoEyebrow: "Votre guide du style marocain",
     seoTitle: "De l’inspiration à la bonne tenue.",
     seoText: "Explorez les tissus et les coupes, trouvez votre collection, puis choisissez le paiement à la livraison.",
@@ -167,6 +254,7 @@ const translations = {
     whatsappSupport: "Nous contacter sur WhatsApp pour plus de détails",
     whatsappMessage: "Bonjour, je souhaite obtenir des informations sur ma commande.",
     footerTagline: "Une élégance transmise de génération en génération.",
+    footerBrandCopy: "Vêtements marocains pour homme, entre savoir-faire authentique et élégance.",
     footerQuickLinks: "Liens rapides",
     footerAbout: "À propos",
     footerContact: "Contact",
@@ -181,7 +269,8 @@ const translations = {
     remove: "Retirer",
     codBadge: "À la livraison",
     demoImages: "Visuels illustratifs de la collection",
-    paymentComingSoon: "Bientôt"
+    paymentComingSoon: "Bientôt",
+    paymentMethod: "Mode de paiement", loginTitle: "Heureux de vous revoir", login: "Connexion", register: "Créer un compte", passwordLabel: "Mot de passe", confirmPasswordLabel: "Confirmer le mot de passe", fullNameLabel: "Nom complet", forgotPassword: "Mot de passe oublié ?", createAccount: "Créer le compte", backToLogin: "Retour à la connexion", forgotCopy: "Saisissez votre e-mail pour recevoir un lien sécurisé de réinitialisation.", sendResetLink: "Envoyer le lien", signedInTitle: "Vous êtes connecté", openAccount: "Ouvrir mon compte", logout: "Déconnexion", loginSuccess: "Connexion réussie.", registrationSuccess: "Compte créé. Confirmez-le depuis votre e-mail, puis connectez-vous.", resetSent: "Le lien de réinitialisation a été envoyé.", invalidCredentials: "E-mail ou mot de passe incorrect.", emailExists: "Un compte existe déjà avec cet e-mail.", passwordMismatch: "Les mots de passe ne correspondent pas.", weakPassword: "Le mot de passe doit contenir au moins 8 caractères.", authNetworkError: "Connexion au service de compte impossible. Réessayez.", noFavourites: "Vous n’avez encore ajouté aucun favori.", emptyResults: "Aucun produit ne correspond à votre recherche.", bestSeller: "Meilleure vente", favourite: "Ajouter aux favoris", unfavourite: "Retirer des favoris"
   },
   en: {
     brand: "الوَتِين",
@@ -191,20 +280,43 @@ const translations = {
     navCod: "Cash on Delivery",
     cart: "Cart",
     eyebrow: "Authentic Moroccan wear",
-    heroTitle: "Moroccan elegance, delivered to your door.",
-    heroText: "Discover djellabas, jabador, gandoura and kaftans. Traditional and modern styles for Eid, weddings and all your special occasions.",
+    heroTitle: "Moroccan elegance,\ndelivered to your door",
+    heroText: "Traditional menswear combining authenticity and quality.",
     shopNow: "Shop collection",
+    shopNowShort: "Shop now",
     readGuides: "Read guides",
     codTitle: "Cash on Delivery",
     codText: "Order now, pay on arrival.",
     deliveryTitle: "Delivery in Morocco",
     deliveryText: "Delivery within Morocco.",
     qualityPromo: "Authentic Moroccan quality",
+    shippingPromo: "Free delivery on orders over 499 MAD",
+    shippingPromo500: "Free delivery across Morocco from 500 MAD",
     deliveryPromo: "Delivery to every city in Morocco",
     qualityTitle: "Guaranteed quality",
     fastDeliveryTitle: "Fast delivery",
     supportTitle: "Customer service 7/7",
     search: "Search products",
+    searchPlaceholder: "Search for a product ...",
+    wishlist: "Wishlist",
+    home: "Home",
+    categories: "Categories",
+    codSafe: "100% secure",
+    easyReturns: "Easy returns",
+    returnsPromo: "Within 7 days",
+    supportPromo: "Always here to help",
+    customerService: "Customer service",
+    trackOrder: "Track order",
+    deliveryAllMorocco: "Across Morocco",
+    authenticProducts: "Authentic products",
+    continuousSupport: "Continuous support",
+    availableNow: "Available now",
+    catDjellaba: "Djellaba",
+    catJabador: "Jabador",
+    catCaftan: "Caftan",
+    catAccessories: "Accessories",
+    specialOffers: "Special offers",
+    searchButton: "Search",
     account: "My account",
     accountKicker: "Customer account",
     accountTitle: "Create your account easily",
@@ -217,8 +329,14 @@ const translations = {
     sizesTitle: "Clear sizing",
     sizesText: "Find your perfect fit.",
     shopEyebrow: "Shop categories",
-    shopTitle: "Featured products",
-    shopText: "Moroccan style for every occasion.",
+    categoryTitle: "Shop by category",
+    categorySubtitle: "Discover our carefully selected collections",
+    shopTitle: "Selected for you",
+    shopText: "Most requested by our customers",
+    craftTitleOne: "Authentic Moroccan craftsmanship",
+    craftTextOne: "Quality in every detail",
+    craftTitleTwo: "Carefully selected materials",
+    craftTextTwo: "For lasting comfort and elegance",
     seoEyebrow: "A guide to Moroccan style",
     seoTitle: "From inspiration to your perfect outfit.",
     seoText: "Get to know the fabrics and styles, explore the collection that suits you, and choose Cash on Delivery.",
@@ -259,6 +377,7 @@ const translations = {
     whatsappSupport: "Contact us on WhatsApp for more details",
     whatsappMessage: "Hello, I would like more information about my order.",
     footerTagline: "Elegance passed down through generations.",
+    footerBrandCopy: "Moroccan menswear combining authentic craftsmanship and refined detail.",
     footerQuickLinks: "Quick links",
     footerAbout: "About us",
     footerContact: "Contact",
@@ -273,7 +392,8 @@ const translations = {
     remove: "Remove",
     codBadge: "COD",
     demoImages: "Illustrative collection images",
-    paymentComingSoon: "Coming soon"
+    paymentComingSoon: "Coming soon",
+    paymentMethod: "Payment method", loginTitle: "Welcome back", login: "Sign in", register: "Create account", passwordLabel: "Password", confirmPasswordLabel: "Confirm password", fullNameLabel: "Full name", forgotPassword: "Forgot password?", createAccount: "Create account", backToLogin: "Back to sign in", forgotCopy: "Enter your email to receive a secure password reset link.", sendResetLink: "Send reset link", signedInTitle: "You are signed in", openAccount: "Open my account", logout: "Sign out", loginSuccess: "Signed in successfully.", registrationSuccess: "Account created. Confirm it from your email, then sign in.", resetSent: "The password reset link was sent.", invalidCredentials: "Incorrect email or password.", emailExists: "An account already exists with this email.", passwordMismatch: "Passwords do not match.", weakPassword: "Password must be at least 8 characters.", authNetworkError: "Could not connect to the account service. Please try again.", noFavourites: "You have not added any favourites yet.", emptyResults: "No products match your search.", bestSeller: "Best seller", favourite: "Save to favourites", unfavourite: "Remove from favourites"
   }
 };
 
@@ -312,6 +432,8 @@ const blogPosts = [
 
 let currentLang = "ar";
 let activeCategory = "all";
+let searchQuery = "";
+let favouritesOnly = false;
 let cart = [];
 
 const languageSelect = document.getElementById("languageSelect");
@@ -325,6 +447,7 @@ const overlay = document.getElementById("overlay");
 const cartItems = document.getElementById("cartItems");
 const cartCount = document.getElementById("cartCount");
 const cartTotal = document.getElementById("cartTotal");
+const bottomCartCount = document.getElementById("bottomCartCount");
 const successMessage = document.getElementById("successMessage");
 const addCartModal = document.getElementById("addCartModal");
 const successModal = document.getElementById("successModal");
@@ -334,8 +457,14 @@ const mobileMenu = document.getElementById("mobileMenu");
 const mobileMenuBackdrop = document.getElementById("mobileMenuBackdrop");
 const mobileLanguageSelect = document.getElementById("mobileLanguageSelect");
 const accountDialog = document.getElementById("accountDialog");
-const accountForm = document.getElementById("accountForm");
-const accountMessage = document.getElementById("accountMessage");
+const loginForm = document.getElementById("loginForm");
+const registerForm = document.getElementById("registerForm");
+const forgotForm = document.getElementById("forgotForm");
+const signedInPanel = document.getElementById("signedInPanel");
+const searchForm = document.getElementById("searchForm");
+const searchInput = document.getElementById("searchInput");
+const mobileSearchPanel = document.getElementById("mobileSearchPanel");
+const mobileSearchInput = document.getElementById("mobileSearchInput");
 
 function t(key) {
   return translations[currentLang][key] || key;
@@ -391,23 +520,62 @@ function scrollCategoryCarousel(step) {
   categoryFilters.scrollBy({ left: step * distance * direction, behavior: "smooth" });
 }
 
+function savedFavouriteIds() {
+  try {
+    const value = JSON.parse(localStorage.getItem("alwatin-favourites") || "[]");
+    return new Set(Array.isArray(value) ? value.map(String) : []);
+  } catch {
+    return new Set();
+  }
+}
+
+function toggleFavourite(id) {
+  const saved = savedFavouriteIds();
+  const key = String(id);
+  if (saved.has(key)) saved.delete(key);
+  else saved.add(key);
+  localStorage.setItem("alwatin-favourites", JSON.stringify([...saved]));
+  renderProducts();
+}
+
 function renderProducts() {
-  const visibleProducts = activeCategory === "all" ? products : products.filter((product) => product.category === activeCategory);
-  productGrid.innerHTML = visibleProducts.map((product) => `
-    <article class="product-card">
-      <a class="product-image" href="${categoryPageLinks[product.category]}" data-product-link="${product.id}" aria-label="${product.label[currentLang]}">
-      <img src="${product.image || productImages[product.category]}" alt="${product.label[currentLang]}" width="600" height="705" loading="lazy" />
-        <span class="cod-badge">${t("codBadge")}</span>
-      </a>
-      <div class="product-body">
-        <div class="product-meta">${categoryLabels[currentLang][product.category]}</div>
-        <h3><a href="${categoryPageLinks[product.category]}" data-product-link="${product.id}">${product.label[currentLang]}</a></h3>
-        <span class="price">${product.price} MAD</span>
-        <p>${product.desc[currentLang]}</p>
-        <button class="btn primary" type="button" data-add="${product.id}" data-size="${product.category === "accessories" ? "42" : "M"}">${t("add")}</button>
-      </div>
-    </article>
-  `).join("");
+  const saved = savedFavouriteIds();
+  const query = searchQuery.trim().toLocaleLowerCase(currentLang);
+  const visibleProducts = products.filter((product) => {
+    const matchesCategory = activeCategory === "all" || product.category === activeCategory;
+    const searchable = `${product.label?.[currentLang] || ""} ${product.desc?.[currentLang] || ""} ${categoryLabels[currentLang]?.[product.category] || ""}`.toLocaleLowerCase(currentLang);
+    const matchesSearch = !query || searchable.includes(query);
+    const matchesFavourite = !favouritesOnly || saved.has(String(product.id));
+    return matchesCategory && matchesSearch && matchesFavourite && product.active !== false;
+  });
+  if (!visibleProducts.length) {
+    productGrid.innerHTML = `<p class="empty-products">${favouritesOnly ? t("noFavourites") : t("emptyResults")}</p>`;
+    return;
+  }
+  productGrid.innerHTML = visibleProducts.map((product, index) => {
+    const isSaved = saved.has(String(product.id));
+    const ratingCount = product.reviewCount || 76 + (index * 13);
+    return `
+      <article class="product-card">
+        <div class="product-media">
+          <a class="product-image" href="${categoryPageLinks[product.category]}" data-product-link="${product.id}" aria-label="${product.label[currentLang]}">
+            <img src="${product.image || productImages[product.category]}" alt="${product.label[currentLang]}" width="600" height="705" loading="lazy" />
+          </a>
+          <button class="product-favorite ${isSaved ? "active" : ""}" type="button" data-favourite-card="${product.id}" aria-pressed="${isSaved}" aria-label="${t(isSaved ? "unfavourite" : "favourite")}">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M20.8 8.8c0 5.5-8.8 10.3-8.8 10.3S3.2 14.3 3.2 8.8A4.5 4.5 0 0 1 12 6.2a4.5 4.5 0 0 1 8.8 2.6Z"/></svg>
+          </button>
+          <span class="cod-badge">${product.featured ? t("bestSeller") : t("codBadge")}</span>
+        </div>
+        <div class="product-body">
+          <div class="product-meta">${categoryLabels[currentLang][product.category]}</div>
+          <h3><a href="${categoryPageLinks[product.category]}" data-product-link="${product.id}">${product.label[currentLang]}</a></h3>
+          <div class="product-price-row"><span class="price">${product.price} MAD</span>${Number(product.comparePrice || 0) > Number(product.price) ? `<del>${product.comparePrice} MAD</del>` : ""}</div>
+          <div class="product-rating" aria-label="5 stars"><span aria-hidden="true">★★★★★</span><small>(${ratingCount})</small></div>
+          <p>${product.desc[currentLang]}</p>
+          <button class="btn primary add-button" type="button" data-add="${product.id}" data-size="${product.category === "accessories" ? "42" : "M"}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M3 3h2l2.5 12h11L21 7H6"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></svg><span>${t("add")}</span></button>
+        </div>
+      </article>`;
+  }).join("");
 }
 
 function renderBlog() {
@@ -426,6 +594,7 @@ function renderBlog() {
 
 function renderCart() {
   cartCount.textContent = cart.reduce((sum, item) => sum + item.qty, 0);
+  if (bottomCartCount) bottomCartCount.textContent = cart.reduce((sum, item) => sum + item.qty, 0);
   if (!cart.length) {
     cartItems.innerHTML = `<p>${t("emptyCart")}</p>`;
   } else {
@@ -458,7 +627,7 @@ function openCart() {
   if (!cartPanel.classList.contains("open")) cartReturnFocus = document.activeElement;
   cartPanel.inert = false;
   document.body.classList.add("cart-open");
-  document.querySelector(".cart-toggle").setAttribute("aria-expanded", "true");
+  document.querySelectorAll(".cart-toggle, [data-bottom-cart]").forEach((node) => node.setAttribute("aria-expanded", "true"));
   cartPanel.classList.add("open");
   overlay.classList.add("show");
   cartPanel.setAttribute("aria-hidden", "false");
@@ -471,7 +640,7 @@ function closeCart() {
   cartPanel.setAttribute("aria-hidden", "true");
   cartPanel.inert = true;
   document.body.classList.remove("cart-open");
-  document.querySelector(".cart-toggle").setAttribute("aria-expanded", "false");
+  document.querySelectorAll(".cart-toggle, [data-bottom-cart]").forEach((node) => node.setAttribute("aria-expanded", "false"));
   if (cartReturnFocus?.isConnected) cartReturnFocus.focus();
   else document.querySelector(".cart-toggle").focus();
 }
@@ -515,13 +684,41 @@ function closeMobileMenu() {
   menuToggle.setAttribute("aria-expanded", "false");
 }
 
-function openAccountDialog() {
+function authErrorMessage(error) {
+  const value = `${error?.message || ""} ${error?.code || ""}`.toLowerCase();
+  if (value.includes("invalid login") || value.includes("invalid credentials")) return t("invalidCredentials");
+  if (value.includes("already registered") || value.includes("already exists")) return t("emailExists");
+  if (value.includes("password")) return t("weakPassword");
+  return error?.message || t("authNetworkError");
+}
+
+function setAuthPanel(name) {
+  document.querySelectorAll("[data-auth-panel]").forEach((panel) => {
+    const active = panel.dataset.authPanel === name;
+    panel.hidden = !active;
+    panel.classList.toggle("active", active);
+  });
+  document.querySelectorAll(".auth-tabs [data-auth-tab]").forEach((tab) => {
+    const active = tab.dataset.authTab === name;
+    tab.classList.toggle("active", active);
+    tab.setAttribute("aria-selected", String(active));
+  });
+  const title = document.getElementById("accountTitle");
+  if (title) title.textContent = name === "register" ? t("register") : name === "forgot" ? t("forgotPassword") : name === "signed-in" ? t("signedInTitle") : t("loginTitle");
+}
+
+async function openAccountDialog() {
   if (!accountDialog) return;
-  accountMessage.textContent = "";
-  accountMessage.classList.remove("error");
+  const user = window.AlwatinDB ? await AlwatinDB.getUser() : null;
+  if (user) {
+    document.getElementById("signedInEmail").textContent = user.email || "";
+    setAuthPanel("signed-in");
+  } else {
+    setAuthPanel("login");
+  }
   if (accountDialog.showModal) accountDialog.showModal();
   else accountDialog.setAttribute("open", "");
-  document.getElementById("accountEmail")?.focus();
+  accountDialog.querySelector("input:not([hidden]), button:not([hidden])")?.focus();
 }
 
 function closeAccountDialog() {
@@ -571,9 +768,13 @@ document.addEventListener("click", (event) => {
     renderFilters();
     renderProducts();
   }
+
+  const favouriteButton = event.target.closest("[data-favourite-card]");
+  if (favouriteButton) toggleFavourite(favouriteButton.dataset.favouriteCard);
 });
 
 document.querySelector(".cart-toggle").addEventListener("click", openCart);
+document.querySelector("[data-bottom-cart]")?.addEventListener("click", openCart);
 document.getElementById("closeCart").addEventListener("click", closeCart);
 overlay.addEventListener("click", closeCart);
 languageSelect.addEventListener("change", (event) => applyLanguage(event.target.value));
@@ -590,30 +791,87 @@ categoryFilters?.addEventListener("scroll", updateCategoryCarousel, { passive: t
 window.addEventListener("resize", updateCategoryCarousel);
 document.getElementById("checkoutNowButton")?.addEventListener("click", () => { closeAddCartChoice(); openCart(); document.querySelector('#checkoutForm input[name="name"]')?.focus(); });
 document.getElementById("closeSuccessModal")?.addEventListener("click", () => successModal?.close());
+document.getElementById("closeAccountDialog")?.addEventListener("click", closeAccountDialog);
+document.querySelectorAll("[data-auth-tab]").forEach((button) => button.addEventListener("click", () => setAuthPanel(button.dataset.authTab)));
+document.querySelectorAll("[data-toggle-password]").forEach((button) => button.addEventListener("click", () => {
+  const input = button.parentElement?.querySelector("input");
+  if (!input) return;
+  input.type = input.type === "password" ? "text" : "password";
+}));
 
-accountForm?.addEventListener("submit", async (event) => {
+searchForm?.addEventListener("submit", (event) => {
   event.preventDefault();
-  const email = new FormData(event.target).get("email") || document.getElementById("accountEmail")?.value;
-  if (!email) return;
-  const submitButton = document.getElementById("accountSubmit");
+  searchQuery = searchInput.value;
+  favouritesOnly = false;
+  renderProducts();
+  document.getElementById("shop")?.scrollIntoView({ behavior: "smooth" });
+});
+mobileSearchPanel?.addEventListener("submit", (event) => {
+  event.preventDefault();
+  searchQuery = mobileSearchInput.value;
+  favouritesOnly = false;
+  renderProducts();
+  document.getElementById("shop")?.scrollIntoView({ behavior: "smooth" });
+});
+document.getElementById("mobileSearchToggle")?.addEventListener("click", () => {
+  const open = mobileSearchPanel.hidden;
+  mobileSearchPanel.hidden = !open;
+  document.getElementById("mobileSearchToggle").setAttribute("aria-expanded", String(open));
+  if (open) mobileSearchInput.focus();
+});
+document.querySelectorAll("[data-wishlist-open]").forEach((button) => button.addEventListener("click", () => {
+  favouritesOnly = true;
+  activeCategory = "all";
+  renderFilters();
+  renderProducts();
+  document.getElementById("shop")?.scrollIntoView({ behavior: "smooth" });
+}));
+
+async function submitAuthForm(form, action, successKey) {
+  const message = form.querySelector(".account-message");
+  const submit = form.querySelector('button[type="submit"]');
+  message.textContent = "";
+  message.classList.remove("error");
   if (!window.AlwatinDB) {
-    accountMessage.textContent = t("accountUnavailable");
-    accountMessage.classList.add("error");
+    message.textContent = t("accountUnavailable");
+    message.classList.add("error");
     return;
   }
-  submitButton.disabled = true;
-  accountMessage.textContent = "";
-  accountMessage.classList.remove("error");
+  submit.disabled = true;
   try {
-    await AlwatinDB.sendMagicLink(email, `${location.origin}/`);
-    accountMessage.textContent = t("accountLinkSent");
-    event.target.reset();
+    await action(new FormData(form));
+    message.textContent = t(successKey);
+    form.reset();
   } catch (error) {
-    accountMessage.textContent = error?.message || t("accountUnavailable");
-    accountMessage.classList.add("error");
+    message.textContent = authErrorMessage(error);
+    message.classList.add("error");
   } finally {
-    submitButton.disabled = false;
+    submit.disabled = false;
   }
+}
+
+loginForm?.addEventListener("submit", (event) => {
+  event.preventDefault();
+  submitAuthForm(loginForm, async (data) => {
+    const result = await AlwatinDB.signInWithPassword(data.get("email"), data.get("password"));
+    document.getElementById("signedInEmail").textContent = result?.user?.email || data.get("email");
+    setAuthPanel("signed-in");
+  }, "loginSuccess");
+});
+registerForm?.addEventListener("submit", (event) => {
+  event.preventDefault();
+  submitAuthForm(registerForm, async (data) => {
+    if (data.get("password") !== data.get("confirmPassword")) throw new Error(t("passwordMismatch"));
+    await AlwatinDB.signUp(data.get("email"), data.get("password"), data.get("fullName"));
+  }, "registrationSuccess");
+});
+forgotForm?.addEventListener("submit", (event) => {
+  event.preventDefault();
+  submitAuthForm(forgotForm, (data) => AlwatinDB.sendPasswordReset(data.get("email"), `${location.origin}/account.html?mode=reset`), "resetSent");
+});
+document.getElementById("customerLogout")?.addEventListener("click", async () => {
+  if (window.AlwatinDB) await AlwatinDB.signOut();
+  setAuthPanel("login");
 });
 
 document.getElementById("checkoutForm").addEventListener("submit", async (event) => {
@@ -638,11 +896,13 @@ document.getElementById("checkoutForm").addEventListener("submit", async (event)
   localStorage.setItem("alwatin-orders", JSON.stringify(orders.slice(0, 200)));
   if (window.AlwatinDB) {
     try {
-      const remoteOrder = await AlwatinDB.insert("orders", { order_number: `AW-${Date.now().toString().slice(-8)}`, customer_name: formData.get("name"), phone: formData.get("phone"), address: formData.get("address"), language: currentLang, payment_method: "cod", status: "new", subtotal: total, delivery_fee: 0, total, notes: "" });
-      const created = Array.isArray(remoteOrder) ? remoteOrder[0] : remoteOrder;
-      if (created?.id) {
-        await AlwatinDB.insert("order_items", cart.map(item => { const product = products.find(entry => String(entry.id) === String(item.id)); return { order_id: created.id, product_id: null, product_name: product.label[currentLang], product_image: productImages[product.category], size: item.size || "M", quantity: item.qty, unit_price: product.price, line_total: product.price * item.qty }; }), { returning: false });
-      }
+      await AlwatinDB.rpc("place_order", {
+        customer_name: formData.get("name"),
+        customer_phone: formData.get("phone"),
+        customer_address: formData.get("address"),
+        order_language: currentLang,
+        order_items: cart.map(item => { const product = products.find(entry => String(entry.id) === String(item.id)); return { product_id: /^[0-9a-f-]{36}$/i.test(String(product.id)) ? product.id : null, product_name: product.label[currentLang], product_image: product.image || productImages[product.category], size: item.size || "M", quantity: item.qty, unit_price: product.price }; })
+      });
     } catch (error) {
       console.warn("Supabase order sync failed; local order retained.", error);
     }

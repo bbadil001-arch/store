@@ -42,7 +42,7 @@ const selectedSizes = new Map();
 let favouriteIds = new Set();
 try {
   const saved = JSON.parse(localStorage.getItem('alwatin-favourites') || '[]');
-  if (Array.isArray(saved)) favouriteIds = new Set(saved.filter(id => products.some(product => product.id === id)));
+  if (Array.isArray(saved)) favouriteIds = new Set(saved.map(String).filter(id => products.some(product => String(product.id) === id)));
 } catch { /* Favourites remain usable for this visit when storage is unavailable. */ }
 
 const productIcons = {
@@ -84,7 +84,12 @@ function renderProductPage() {
     return;
   }
   const size = sizeFor(product);
-  const saved = favouriteIds.has(product.id);
+  try {
+    const stored = JSON.parse(localStorage.getItem('alwatin-favourites') || '[]');
+    if (Array.isArray(stored)) favouriteIds = new Set(stored.map(String));
+  } catch { /* Keep in-memory favourites. */ }
+  const favouriteKey = String(product.id);
+  const saved = favouriteIds.has(favouriteKey);
   const views = product.category === 'accessories' ? [galleryViews[0], galleryViews[2]] : galleryViews;
   galleryIndex = Math.min(galleryIndex, views.length - 1);
   const view = views[galleryIndex];
@@ -223,9 +228,10 @@ document.addEventListener('click', event => {
   if (step) selectGallery(galleryIndex + Number(step.dataset.galleryStep));
   const heart = event.target.closest('#favouriteProduct');
   if (heart) {
-    if (favouriteIds.has(currentProductId)) favouriteIds.delete(currentProductId);
-    else favouriteIds.add(currentProductId);
-    const saved = favouriteIds.has(currentProductId);
+    const key = String(currentProductId);
+    if (favouriteIds.has(key)) favouriteIds.delete(key);
+    else favouriteIds.add(key);
+    const saved = favouriteIds.has(key);
     heart.classList.toggle('is-saved', saved);
     heart.setAttribute('aria-pressed', String(saved));
     heart.setAttribute('aria-label', t(saved ? 'unfavourite' : 'favourite'));
