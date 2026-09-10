@@ -259,6 +259,28 @@ body.cart-open { overflow: hidden; }
 
 .image-note { margin: 16px 0 0; color: var(--muted); font-size: .8125rem; text-align: end; }
 
+/* Keep category image sizes and labels aligned across desktop and mobile. */
+.filters { grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 18px; }
+.filter-chip { display: flex; flex-direction: column; align-items: center; justify-content: flex-start; gap: 10px; min-width: 0; aspect-ratio: auto; padding: 0 6px 4px; background: transparent; border: 0; border-radius: 0; color: var(--ink); overflow: visible; text-align: center; }
+.filter-chip img { position: static; z-index: auto; flex: 0 0 auto; width: min(100%, 150px); height: auto; aspect-ratio: 1; border-radius: 50%; object-fit: cover; object-position: 50% 22%; }
+.filter-chip::after { display: none; }
+.filter-chip span { display: block; width: 100%; min-height: 1.6em; line-height: 1.6; text-align: center; white-space: nowrap; }
+.filter-chip:hover img { transform: scale(1.04); }
+.filter-chip.active { outline: 0; }
+.filter-chip.active img { outline: 3px solid var(--emerald); outline-offset: 3px; }
+.filter-chip.active span { color: var(--emerald); font-weight: 700; }
+@media (max-width: 700px) {
+  .filters { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px 8px; overflow: visible; padding: 4px 0 10px; margin-inline: 0; scroll-snap-type: none; }
+  .filter-chip { width: auto; flex-shrink: 1; gap: 8px; padding: 0 2px 3px; font-size: .875rem; scroll-snap-align: none; }
+  .filter-chip img { width: clamp(68px, 20vw, 94px); height: clamp(68px, 20vw, 94px); }
+  .filter-chip span { font-size: .875rem; line-height: 1.55; }
+}
+@media (max-width: 360px) {
+  .filters { column-gap: 5px; }
+  .filter-chip img { width: 66px; height: 66px; }
+  .filter-chip span { font-size: .8125rem; }
+}
+
 /* Use the original reference artwork, clipped to its exact logo bounds. */
 .brand-logo { display: block; width: 178px; height: auto; overflow: hidden; }
 .brand small { margin-top: 2px; }
@@ -394,7 +416,7 @@ dialog::backdrop { background: rgba(29, 34, 25, .42); backdrop-filter: blur(4px)
   .mobile-menu-backdrop { position: fixed; inset: 0; z-index: 70; display: block; background: rgba(29, 34, 25, .36); opacity: 0; visibility: hidden; transition: opacity .25s, visibility .25s; }
   .mobile-menu-backdrop.show { opacity: 1; visibility: visible; }
   .mobile-menu {
-    background: rgba(255, 255, 255, .10);
+    background: rgba(255, 255, 255, .80);
     border-inline-start: 1px solid rgba(255, 255, 255, .28);
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
